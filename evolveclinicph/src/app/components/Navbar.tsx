@@ -19,10 +19,10 @@ const Navbar = () => {
             </div>
           </div>
           <div className="hidden md:flex items-center space-x-1">
-            <Link href="#services" className="py-4 px-2 text-black text-3xl font-semibold hover:text-turq-shaded1 transition duration-300">Services</Link>
-            <Link href="#bookings" className="py-4 px-2 text-black text-3xl font-semibold hover:text-turq-shaded1 transition duration-300">Bookings</Link>
-            <Link href="#about" className="py-4 px-2 text-black text-3xl font-semibold hover:text-turq-shaded1 transition duration-300">About Us</Link>
-            <Link href="#contact" className="py-4 px-2 text-black text-3xl font-semibold hover:text-turq-shaded1 transition duration-300">Contact Us</Link>
+            <Link href="#services" className="py-4 px-4 text-black text-3xl font-semibold hover:text-turq-shaded1 transition duration-300">Services</Link>
+            <Link href="#bookings" className="py-4 px-4 text-black text-3xl font-semibold hover:text-turq-shaded1 transition duration-300">Bookings</Link>
+            <Link href="#about" className="py-4 px-4 text-black text-3xl font-semibold hover:text-turq-shaded1 transition duration-300">About Us</Link>
+            <Link href="#contact" className="py-4 px-4 text-black text-3xl font-semibold hover:text-turq-shaded1 transition duration-300">Contact Us</Link>
           </div>
           <div className="md:hidden flex items-center">
             <button className="outline-none mobile-menu-button" onClick={() => setIsOpen(!isOpen)}>
