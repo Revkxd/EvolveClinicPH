@@ -11,7 +11,11 @@ export default {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
-        turquoise: '#40E0D0',
+        turq: {
+          DEFAULT: '#67f2e3',
+          shaded1: '#31a99e',
+          shaded2: '#1c7878',
+        },
       },
     },
   },

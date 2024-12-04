@@ -27,7 +27,7 @@ export default function BookingsComponent() {
           <label htmlFor="date" className="block mb-2">Preferred Date</label>
           <input type="date" id="date" name="date" className="w-full p-2 border rounded" required />
         </div>
-        <button type="submit" className="w-full bg-green-500 text-white p-2 rounded hover:bg-green-600 transition duration-300">Book Now</button>
+        <button type="submit" className="w-full bg-turq-shaded1 text-white p-2 rounded hover:bg-turq-shaded2 transition duration-300">Book Now</button>
       </form>
     </section>
   )
