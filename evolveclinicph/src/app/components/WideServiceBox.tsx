@@ -18,7 +18,7 @@ interface WideServiceBoxProps {
   services: ExpandedService[]
 }
 
-const WideServiceBox: React.FC<WideServiceBoxProps> = ({ category, services }) => {
+export default function WideServiceBox({ category, services }: WideServiceBoxProps) {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const nextService = () => {
@@ -93,5 +93,3 @@ const WideServiceBox: React.FC<WideServiceBoxProps> = ({ category, services }) =
     </div>
   )
 }
-
-export default WideServiceBox

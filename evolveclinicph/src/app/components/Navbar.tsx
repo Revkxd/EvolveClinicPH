@@ -4,7 +4,7 @@ import { useState } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-const Navbar = () => {
+export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
@@ -43,5 +43,3 @@ const Navbar = () => {
     </nav>
   )
 }
-
-export default Navbar

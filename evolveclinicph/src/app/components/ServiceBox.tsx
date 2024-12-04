@@ -14,7 +14,7 @@ interface ServiceBoxProps {
   services: Service[]
 }
 
-const ServiceBox: React.FC<ServiceBoxProps> = ({ category, services }) => {
+export default function ServiceBox({ category, services }: ServiceBoxProps) {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const nextService = () => {
@@ -74,5 +74,3 @@ const ServiceBox: React.FC<ServiceBoxProps> = ({ category, services }) => {
     </div>
   )
 }
-
-export default ServiceBox
