@@ -55,15 +55,17 @@ const ServiceBox: React.FC<ServiceBoxProps> = ({ category, services }) => {
         <div className="flex justify-between items-center w-full">
           <button 
             onClick={prevService}
-            className="p-1 rounded-full bg-turq-shaded1 text-white hover:bg-turq-shaded2 transition duration-300"
+            className={`p-1 rounded-full ${services.length <= 1 ? 'bg-gray-300 text-gray-500 cursor-not-allowed' : 'bg-turq-shaded1 text-white hover:bg-turq-shaded2'} transition duration-300`}
             aria-label="Previous service"
+            disabled={services.length <= 1}  // Disable button if services length is <= 1
           >
             <ChevronLeft size={20} />
           </button>
           <button 
             onClick={nextService}
-            className="p-1 rounded-full bg-turq-shaded1 text-white hover:bg-turq-shaded2 transition duration-300"
+            className={`p-1 rounded-full ${services.length <= 1 ? 'bg-gray-300 text-gray-500 cursor-not-allowed' : 'bg-turq-shaded1 text-white hover:bg-turq-shaded2'} transition duration-300`}
             aria-label="Next service"
+            disabled={services.length <= 1}  // Disable button if services length is <= 1
           >
             <ChevronRight size={20} />
           </button>
