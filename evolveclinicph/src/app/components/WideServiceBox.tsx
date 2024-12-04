@@ -3,18 +3,22 @@
 import { useState } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 
-interface Service {
-  title: string
-  desc: string
-  addons?: string 
+interface ExpandedService {
+  title: string,
+  formerName: string,
+  desc: string,
+  duration: string,
+  expectation: string,
+  reasoning: string,
+  enhancement: string
 }
 
-interface ServiceBoxProps {
+interface WideServiceBoxProps {
   category: string
-  services: Service[]
+  services: ExpandedService[]
 }
 
-const ServiceBox: React.FC<ServiceBoxProps> = ({ category, services }) => {
+const WideServiceBox: React.FC<WideServiceBoxProps> = ({ category, services }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const nextService = () => {
@@ -30,13 +34,30 @@ const ServiceBox: React.FC<ServiceBoxProps> = ({ category, services }) => {
   }
 
   return (
-    <div className="bg-white p-4 rounded-lg shadow-md h-[450px] flex flex-col justify-between overflow-y-auto">
-      <div>
+    <div className="bg-white p-4 rounded-lg shadow-md h-[500px] flex flex-col justify-between">
+      <div className="max-h-96 overflow-y-auto custom-scrollbar">
         <h3 className="text-xl font-bold mb-2 text-turq-shaded2">{category}</h3>
         <h4 className="text-lg font-medium mb-2 text-turq-shaded1">{services[currentIndex].title}</h4>
         <p className="mb-2">{services[currentIndex].desc}</p>
-        <p className="mb-2 font-semibold">
-          {services[currentIndex]?.addons !== undefined ? `Add Ons: ${services[currentIndex].addons}` : ''}
+        <p className="mb-2">
+          <span className="font-semibold">Former Name: </span>
+          <span>{services[currentIndex].formerName}</span>
+        </p>
+        <p className="mb-2">
+          <span className="font-semibold">Duration: </span>
+          <span>{services[currentIndex].duration}</span>
+        </p>
+        <p className="mb-2">
+          <span className="font-semibold">Expectation: </span>
+          <span>{services[currentIndex].expectation}</span>
+        </p>
+        <p className="mb-2">
+          <span className="font-semibold">Reasoning: </span>
+          <span>{services[currentIndex].reasoning}</span>
+        </p>
+        <p className="mb-2">
+          <span className="font-semibold">Enhancement: </span>
+          <span>{services[currentIndex].enhancement}</span>
         </p>
       </div>
       <div className="flex flex-col items-center space-y-4">
@@ -73,4 +94,4 @@ const ServiceBox: React.FC<ServiceBoxProps> = ({ category, services }) => {
   )
 }
 
-export default ServiceBox
+export default WideServiceBox
