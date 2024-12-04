@@ -1,4 +1,4 @@
-const Bookings = () => {
+export default function BookingsComponent() {
   return (
     <section id="bookings" className="py-20 bg-gray-100">
       <h2 className="text-3xl font-bold mb-8 text-center">Book an Appointment</h2>
@@ -32,5 +32,3 @@ const Bookings = () => {
     </section>
   )
 }
-
-export default Bookings

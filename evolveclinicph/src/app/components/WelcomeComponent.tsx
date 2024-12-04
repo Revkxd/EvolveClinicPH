@@ -1,4 +1,4 @@
-const Welcome = () => {
+export default function WelcomeComponent() {
   return (
     <section id="welcome" className="py-20 text-center">
       <h1 className="text-4xl font-bold mb-4">Welcome to Evolve Clinic PH</h1>
@@ -6,5 +6,3 @@ const Welcome = () => {
     </section>
   )
 }
-
-export default Welcome

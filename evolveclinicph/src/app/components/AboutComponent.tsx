@@ -1,4 +1,4 @@
-const About = () => {
+export default function AboutComponent() {
   return (
     <section id="about" className="py-20">
       <h2 className="text-3xl font-bold mb-8 text-center">About Us</h2>
@@ -13,5 +13,3 @@ const About = () => {
     </section>
   )
 }
-
-export default About
