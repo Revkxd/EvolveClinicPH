@@ -1,8 +1,8 @@
-import WelcomeComponent from './components/WelcomeComponent'
-import ServicesComponent from './components/ServicesComponent'
-import BookingsComponent from './components/BookingsComponent'
-import AboutComponent from './components/AboutComponent'
-import ContactComponent from './components/ContactComponent'
+import WelcomeComponent from './components/homepage/WelcomeComponent'
+import ServicesComponent from './components/homepage/ServicesComponent'
+import BookingsComponent from './components/homepage/BookingsComponent'
+import AboutComponent from './components/homepage/AboutComponent'
+import ContactComponent from './components/homepage/ContactComponent'
 
 export default function Home() {
   return (

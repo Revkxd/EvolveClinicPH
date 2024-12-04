@@ -1,6 +1,6 @@
 'use client'
 
-import ServiceBox from './ServiceBox'
+import ServiceBox from '../ServiceBox'
 
 // region SERVICES_LIST
 const laserProcedures = [
