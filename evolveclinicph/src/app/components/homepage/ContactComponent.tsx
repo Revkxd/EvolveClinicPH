@@ -1,6 +1,6 @@
 export default function ContactComponent() {
   return (
-    <section id="contact" className="py-20 bg-gray-100">
+    <section id="contact" className="px-4 py-6 bg-gray-100">
       <h2 className="text-3xl font-bold mb-8 text-center">Contact Us</h2>
       <div className="max-w-3xl mx-auto">
         <div className="grid md:grid-cols-2 gap-8">
@@ -23,7 +23,7 @@ export default function ContactComponent() {
               <label htmlFor="message" className="block mb-2">Message</label>
               <textarea id="message" name="message" rows={4} className="w-full p-2 border rounded" required></textarea>
             </div>
-            <button type="submit" className="bg-turq-shaded1 text-white p-2 rounded hover:bg-turq-shaded2 transition duration-300">Send Message</button>
+            <button type="submit" className="w-full bg-turq-shaded1 text-white p-2 rounded hover:bg-turq-shaded2 transition duration-300">Send Message</button>
           </form>
         </div>
       </div>

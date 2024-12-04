@@ -1,6 +1,6 @@
 export default function BookingsComponent() {
   return (
-    <section id="bookings" className="py-20 bg-gray-100">
+    <section id="bookings" className="px-4 py-6 bg-gray-100">
       <h2 className="text-3xl font-bold mb-8 text-center">Book an Appointment</h2>
       <form className="max-w-md mx-auto">
         <div className="mb-4">
