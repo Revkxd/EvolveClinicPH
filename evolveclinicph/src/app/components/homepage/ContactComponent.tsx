@@ -6,9 +6,9 @@ export default function ContactComponent() {
         <div className="grid md:grid-cols-2 gap-8">
           <div>
             <h3 className="text-xl font-semibold mb-4">Get in Touch</h3>
-            <p className="mb-2">Phone: +63 123 456 7890</p>
-            <p className="mb-2">Email: info@evolveclinicph.com</p>
-            <p className="mb-2">Address: 123 Main Street, Makati City, Philippines</p>
+            <p className="mb-2">Phone: +63 917 875 4379</p>
+            <p className="mb-2">Instagram: @evolveclinic.ph</p>
+            <p className="mb-2">Address: Evolve Dermatology and Cosmetic Surgery 2nd floor WP Fuel Inc building (caltex) White Plains Quezon City</p>
           </div>
           <form>
             <div className="mb-4">
