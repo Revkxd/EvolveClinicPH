@@ -23,7 +23,7 @@ export default function ContactComponent() {
               <label htmlFor="message" className="block mb-2">Message</label>
               <textarea id="message" name="message" rows={4} className="w-full p-2 border rounded" required></textarea>
             </div>
-            <button type="submit" className="w-full bg-turq-shaded1 text-white p-2 rounded hover:bg-turq-shaded2 transition duration-300">Send Message</button>
+            <button type="submit" className="w-full bg-turq text-white p-2 rounded hover:bg-turq-shaded transition duration-300">Send Message</button>
           </form>
         </div>
       </div>

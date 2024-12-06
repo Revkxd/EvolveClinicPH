@@ -36,8 +36,8 @@ export default function WideServiceBox({ category, services }: WideServiceBoxPro
   return (
     <div className="bg-white p-4 rounded-lg shadow-md h-[500px] flex flex-col justify-between">
       <div className="max-h-96 overflow-y-auto custom-scrollbar">
-        <h3 className="text-xl font-bold mb-2 text-turq-shaded2">{category}</h3>
-        <h4 className="text-lg font-medium mb-2 text-turq-shaded1">{services[currentIndex].title}</h4>
+        <h3 className="text-xl font-bold mb-2 text-turq-shaded">{category}</h3>
+        <h4 className="text-lg font-medium mb-2 text-turq">{services[currentIndex].title}</h4>
         <p className="mb-2">{services[currentIndex].desc}</p>
         <p className="mb-2">
           <span className="font-semibold">Former Name: </span>
@@ -67,7 +67,7 @@ export default function WideServiceBox({ category, services }: WideServiceBoxPro
               key={index}
               onClick={() => goToService(index)}
               className={`w-2 h-2 rounded-full ${
-                index === currentIndex ? 'bg-turq-shaded1' : 'bg-gray-200'
+                index === currentIndex ? 'bg-turq' : 'bg-gray-200'
               } transition-colors duration-300`}
               aria-label={`Go to service ${index + 1}`}
             />
@@ -76,14 +76,14 @@ export default function WideServiceBox({ category, services }: WideServiceBoxPro
         <div className="flex justify-between items-center w-full">
           <button 
             onClick={prevService}
-            className="p-1 rounded-full bg-turq-shaded1 text-white hover:bg-turq-shaded2 transition duration-300"
+            className="p-1 rounded-full bg-turq text-white hover:bg-turq-shaded transition duration-300"
             aria-label="Previous service"
           >
             <ChevronLeft size={20} />
           </button>
           <button 
             onClick={nextService}
-            className="p-1 rounded-full bg-turq-shaded1 text-white hover:bg-turq-shaded2 transition duration-300"
+            className="p-1 rounded-full bg-turq text-white hover:bg-turq-shaded transition duration-300"
             aria-label="Next service"
           >
             <ChevronRight size={20} />

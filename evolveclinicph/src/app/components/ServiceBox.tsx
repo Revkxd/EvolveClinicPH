@@ -32,8 +32,8 @@ export default function ServiceBox({ category, services }: ServiceBoxProps) {
   return (
     <div className="bg-white p-4 rounded-lg shadow-md h-[450px] flex flex-col justify-between overflow-y-auto">
       <div>
-        <h3 className="text-xl font-bold mb-2 text-turq-shaded2">{category}</h3>
-        <h4 className="text-lg font-medium mb-2 text-turq-shaded1">{services[currentIndex].title}</h4>
+        <h3 className="text-xl font-bold mb-2 text-turq-shaded">{category}</h3>
+        <h4 className="text-lg font-medium mb-2 text-turq">{services[currentIndex].title}</h4>
         <p className="mb-2">{services[currentIndex].desc}</p>
         <p className="mb-2 font-semibold">
           {services[currentIndex]?.addons !== undefined ? `Add Ons: ${services[currentIndex].addons}` : ''}
@@ -46,7 +46,7 @@ export default function ServiceBox({ category, services }: ServiceBoxProps) {
               key={index}
               onClick={() => goToService(index)}
               className={`w-2 h-2 rounded-full ${
-                index === currentIndex ? 'bg-turq-shaded1' : 'bg-gray-200'
+                index === currentIndex ? 'bg-turq' : 'bg-gray-200'
               } transition-colors duration-300`}
               aria-label={`Go to service ${index + 1}`}
             />
@@ -55,7 +55,7 @@ export default function ServiceBox({ category, services }: ServiceBoxProps) {
         <div className="flex justify-between items-center w-full">
           <button 
             onClick={prevService}
-            className={`p-1 rounded-full ${services.length <= 1 ? 'bg-gray-300 text-gray-500 cursor-not-allowed' : 'bg-turq-shaded1 text-white hover:bg-turq-shaded2'} transition duration-300`}
+            className={`p-1 rounded-full ${services.length <= 1 ? 'bg-gray-300 text-gray-500 cursor-not-allowed' : 'bg-turq text-white hover:bg-turq-shaded'} transition duration-300`}
             aria-label="Previous service"
             disabled={services.length <= 1}  // Disable button if services length is <= 1
           >
@@ -63,7 +63,7 @@ export default function ServiceBox({ category, services }: ServiceBoxProps) {
           </button>
           <button 
             onClick={nextService}
-            className={`p-1 rounded-full ${services.length <= 1 ? 'bg-gray-300 text-gray-500 cursor-not-allowed' : 'bg-turq-shaded1 text-white hover:bg-turq-shaded2'} transition duration-300`}
+            className={`p-1 rounded-full ${services.length <= 1 ? 'bg-gray-300 text-gray-500 cursor-not-allowed' : 'bg-turq text-white hover:bg-turq-shaded'} transition duration-300`}
             aria-label="Next service"
             disabled={services.length <= 1}  // Disable button if services length is <= 1
           >
