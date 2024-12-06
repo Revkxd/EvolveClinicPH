@@ -1,7 +1,10 @@
-export default function ContactComponent() {
+import { HomePageProps } from "@/types/props";
+import FormHeader from "../FormHeader";
+
+export default function ContactComponent({ isHomePage }: HomePageProps) {
   return (
     <section id="contact" className="px-4 py-6 bg-gray-100">
-      <h2 className="text-3xl font-bold mb-8 text-center">Contact Us</h2>
+      <FormHeader isHomePage={isHomePage} header="Contact Us" />
       <div className="max-w-3xl mx-auto">
         <div className="grid md:grid-cols-2 gap-8">
           <div>

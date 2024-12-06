@@ -11,7 +11,7 @@ export default function Home() {
       <ServicesComponent isHomePage={true} />
       <BookingsComponent isHomePage={true} />
       <AboutComponent />
-      <ContactComponent />
+      <ContactComponent isHomePage={true} />
     </div>
   )
 }

@@ -1,5 +1,5 @@
 import { HomePageProps } from "@/types/props";
-import Image from "next/image";
+import FormHeader from "../FormHeader";
 
 interface ServiceOption {
   key: string;
@@ -136,14 +136,7 @@ const allServices: ServiceOption[] = [
 export default function BookingsComponent({ isHomePage }: HomePageProps) {
   return (
     <section id="bookings" className="px-4 py-6 bg-gray-100">
-      <Image
-        src="/secondary-smalt-blue.png"
-        alt="Evolve Clinic PH Logo"
-        width={isHomePage ? 400 : 500}
-        height={isHomePage ? 400 : 500}
-        className="mx-auto mb-4"
-      />
-      <h2 className="text-5xl font-bold mb-8 text-center">Book an Appointment</h2>
+      <FormHeader isHomePage={isHomePage} header="Book an Appointment" />
       <form className="max-w-md mx-auto">
         <div className="mb-4">
           <label htmlFor="name" className="block mb-2">Name</label>
