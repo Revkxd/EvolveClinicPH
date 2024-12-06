@@ -9,7 +9,7 @@ export default function Home() {
     <div className="container mx-auto px-4">
       <WelcomeComponent />
       <ServicesComponent isHomePage={true} />
-      <BookingsComponent />
+      <BookingsComponent isHomePage={true} />
       <AboutComponent />
       <ContactComponent />
     </div>

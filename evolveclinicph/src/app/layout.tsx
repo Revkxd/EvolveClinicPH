@@ -21,9 +21,13 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${inter.className} custom-scrollbar`}>
         <SpeedInsights />
-        <Navbar />
-        {children}
-        <Footer />
+        <div className='flex flex-col min-h-screen'>
+          <Navbar />
+          <main className='flex-grow'>
+            {children}
+          </main>
+          <Footer />
+        </div>
       </body>
     </html>
   )

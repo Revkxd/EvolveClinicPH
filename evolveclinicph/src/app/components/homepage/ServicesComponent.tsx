@@ -1,5 +1,6 @@
 'use client'
 
+import { HomePageProps } from '@/types/props'
 import ServiceBox from '../ServiceBox'
 import WideServiceBox from '../WideServiceBox'
 
@@ -273,11 +274,7 @@ const slimmingAndContouring = [
 ]
 // #endregion
 
-interface ServicesProps {
-  isHomePage: boolean;
-}
-
-export default function ServicesComponent({ isHomePage }: ServicesProps) {
+export default function ServicesComponent({ isHomePage }: HomePageProps) {
   return (
     <section id="services" className="py-20">
       <h2 className="text-3xl font-bold mb-8 text-center">Facials and Cosmetic Services</h2>
