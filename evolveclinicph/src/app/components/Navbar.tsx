@@ -35,10 +35,10 @@ export default function Navbar() {
         </div>
       </div>
       <div className={`${isOpen ? 'block' : 'hidden'} md:hidden`}>
-        <Link href="#services" className="block py-2 px-5 text-xl hover:bg-turq hover:text-white transition duration-300">Services</Link>
-        <Link href="#bookings" className="block py-2 px-5 text-xl hover:bg-turq hover:text-white transition duration-300">Bookings</Link>
-        <Link href="#about" className="block py-2 px-5 text-xl hover:bg-turq hover:text-white transition duration-300">About Us</Link>
-        <Link href="#contact" className="block py-2 px-5 text-xl hover:bg-turq hover:text-white transition duration-300">Contact Us</Link>
+        <Link href="services" className="block py-2 px-5 text-xl hover:bg-turq hover:text-white transition duration-300">Services</Link>
+        <Link href="bookings" className="block py-2 px-5 text-xl hover:bg-turq hover:text-white transition duration-300">Bookings</Link>
+        <Link href="about" className="block py-2 px-5 text-xl hover:bg-turq hover:text-white transition duration-300">About Us</Link>
+        <Link href="contact" className="block py-2 px-5 text-xl hover:bg-turq hover:text-white transition duration-300">Contact Us</Link>
       </div>
     </nav>
   )
