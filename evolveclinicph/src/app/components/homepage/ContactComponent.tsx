@@ -3,7 +3,7 @@ import FormHeader from "../FormHeader";
 
 export default function ContactComponent({ isHomePage }: HomePageProps) {
   return (
-    <section id="contact" className="px-4 py-6 bg-gray-100 pt-16">
+    <section id="contact" className="px-4 py-6 pt-16">
       <FormHeader isHomePage={isHomePage} header="Contact Us" />
       <div className="max-w-3xl mx-auto">
         <div className="grid md:grid-cols-2 gap-8">
