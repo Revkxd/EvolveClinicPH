@@ -136,7 +136,7 @@ const allServices: ServiceOption[] = [
 export default function BookingsComponent({ isHomePage }: HomePageProps) {
   return (
     <section id="bookings" className="px-4 py-6 pt-16">
-      <FormHeader isHomePage={isHomePage} header="Book an Appointment" />
+      <FormHeader isHomePage={isHomePage} header="Book an Appointment" headerTextStyle="text-4xl" />
       <form className="max-w-md mx-auto">
         <div className="mb-4">
           <label htmlFor="name" className="block mb-2">Name</label>
