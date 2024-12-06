@@ -7,6 +7,10 @@ import Link from 'next/link'
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
 
+  function closeMenu() {
+    setIsOpen(false);
+  }
+
   return (
     <nav className="bg-white shadow-lg">
       <div className="max-w-6xl mx-auto px-4">
@@ -35,10 +39,10 @@ export default function Navbar() {
         </div>
       </div>
       <div className={`${isOpen ? 'block' : 'hidden'} md:hidden`}>
-        <Link href="services" className="block py-2 px-5 text-xl hover:bg-turq hover:text-white transition duration-300">Services</Link>
-        <Link href="bookings" className="block py-2 px-5 text-xl hover:bg-turq hover:text-white transition duration-300">Bookings</Link>
-        <Link href="about" className="block py-2 px-5 text-xl hover:bg-turq hover:text-white transition duration-300">About Us</Link>
-        <Link href="contact" className="block py-2 px-5 text-xl hover:bg-turq hover:text-white transition duration-300">Contact Us</Link>
+        <Link href="services" className="block py-2 px-5 text-xl hover:bg-turq hover:text-white transition duration-300" onClick={closeMenu}>Services</Link>
+        <Link href="bookings" className="block py-2 px-5 text-xl hover:bg-turq hover:text-white transition duration-300" onClick={closeMenu}>Bookings</Link>
+        <Link href="about" className="block py-2 px-5 text-xl hover:bg-turq hover:text-white transition duration-300" onClick={closeMenu}>About Us</Link>
+        <Link href="contact" className="block py-2 px-5 text-xl hover:bg-turq hover:text-white transition duration-300" onClick={closeMenu}>Contact Us</Link>
       </div>
     </nav>
   )
