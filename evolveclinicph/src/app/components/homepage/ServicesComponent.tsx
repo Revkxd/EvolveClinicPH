@@ -277,7 +277,7 @@ const slimmingAndContouring = [
 export default function ServicesComponent({ isHomePage }: HomePageProps) {
   return (
     <section id="services" className="py-20">
-      <h2 className="text-3xl font-bold mb-8 text-center">Facials and Cosmetic Services</h2>
+      <h2 className="text-5xl font-bold mb-8 text-center">Facials and Cosmetic Services</h2>
       <div className={`max-w-6xl mx-auto px-4 ${isHomePage ? 'max-h-[550px] overflow-y-scroll scrollbar-none' : ''}`}>
         <div className="py-4">
           <WideServiceBox category="Facial Services" services={facialServices} />
