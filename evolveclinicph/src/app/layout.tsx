@@ -9,7 +9,7 @@ const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: 'Evolve Clinic PH',
-  description: 'Premium skincare services in the Philippines',
+  description: 'Your premier destination for advanced skincare treatments and cosmetic surgical procedures',
 }
 
 export default function RootLayout({
