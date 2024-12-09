@@ -35,7 +35,7 @@ export default function WideServiceBox({ category, services }: WideServiceBoxPro
 
   return (
     <div className="bg-teal-50 p-4 rounded-lg shadow-md h-[500px] flex flex-col justify-between">
-      <div className="max-h-[100] overflow-y-auto scollbar-none">
+      <div className="max-h-[100] overflow-y-auto scrollbar-none">
         <h3 className="text-xl font-bold mb-2 text-turq-shaded">{category}</h3>
         <h4 className="text-lg font-medium mb-2 text-turq">{services[currentIndex].title}</h4>
         <p className="mb-2">{services[currentIndex].desc}</p>
