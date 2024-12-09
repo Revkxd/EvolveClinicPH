@@ -278,7 +278,7 @@ export default function ServicesComponent({ isHomePage }: HomePageProps) {
   return (
     <section id="services" className="py-20">
       <h2 className="text-5xl font-bold mb-8 text-center">Facials and Cosmetic Services</h2>
-      <div className={`max-w-6xl mx-auto px-4 ${isHomePage ? 'max-h-[550px] overflow-y-scroll scrollbar-none' : ''}`}>
+      <div className={`max-w-6xl mx-auto px-4 ${isHomePage ? 'max-h-[520px] overflow-y-scroll custom-scrollbar' : ''}`}>
         <div className="py-4">
           <WideServiceBox category="Facial Services" services={facialServices} />
         </div>

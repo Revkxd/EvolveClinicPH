@@ -35,7 +35,7 @@ export default function WideServiceBox({ category, services }: WideServiceBoxPro
 
   return (
     <div className="bg-teal-50 p-4 rounded-lg shadow-md h-[500px] flex flex-col justify-between">
-      <div className="max-h-96 overflow-y-auto custom-scrollbar">
+      <div className="max-h-[100] overflow-y-auto scollbar-none">
         <h3 className="text-xl font-bold mb-2 text-turq-shaded">{category}</h3>
         <h4 className="text-lg font-medium mb-2 text-turq">{services[currentIndex].title}</h4>
         <p className="mb-2">{services[currentIndex].desc}</p>
@@ -60,7 +60,7 @@ export default function WideServiceBox({ category, services }: WideServiceBoxPro
           <span>{services[currentIndex].enhancement}</span>
         </p>
       </div>
-      <div className="flex flex-col items-center space-y-4">
+      <div className="flex flex-col items-center space-y-4 pt-4">
         <div className="flex justify-center space-x-2">
           {services.map((_, index) => (
             <button
