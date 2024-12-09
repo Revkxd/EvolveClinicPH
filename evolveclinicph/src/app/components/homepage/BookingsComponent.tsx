@@ -157,7 +157,7 @@ export default function BookingsComponent({ isHomePage }: HomePageProps) {
         </div>
         <div className="mb-4">
           <label htmlFor="date" className="block mb-2">Preferred Date</label>
-          <input type="date" id="date" name="date" className="w-full p-2 border rounded" required />
+          <input type="date" id="date" name="date" className="w-full p-2 border rounded" required min={new Date().toISOString().split("T")[0]} />
         </div>
         <button type="submit" className="w-full bg-turq text-white p-2 rounded hover:bg-turq-shaded transition duration-300">Book Now</button>
       </form>
