@@ -34,7 +34,7 @@ export default function Navbar() {
           <div className="flex space-x-7">
             <div>
               <Link href="/" className="flex items-center py-4 px-2">
-                <Image src="/logo-light.png" alt="Evolve Clinic PH Logo" width={130} height={130} />
+                <Image src="/primary-light.png" alt="Evolve Clinic PH Logo" width={130} height={130} />
               </Link>
             </div>
           </div>
