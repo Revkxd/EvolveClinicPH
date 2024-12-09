@@ -3,10 +3,10 @@ import Link from 'next/link'
 
 export default function NotFound() {
   return (
-    <div className="min-h-[75vh] flex flex-col items-center justify-center bg-gray-100">
+    <div className="min-h-[80vh] flex flex-col items-center justify-center bg-gray-100 bg-custom">
       <div className="text-center">
         <Image
-          src="/primary-smalt-blue.png"
+          src="/primary-dark.png"
           alt="Evolve Clinic PH Logo"
           width={200}
           height={200}

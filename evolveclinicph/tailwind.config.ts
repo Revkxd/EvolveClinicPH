@@ -12,7 +12,9 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
         turq: {
-          DEFAULT: '#31a99e',
+          DEFAULT: '#648c8c',
+          text: '#31a99e',
+          lighterdefault: '#799f9f',
           lightlyshaded: '#229191',
           shaded: '#1c7878',
           light: '#67f2e3',

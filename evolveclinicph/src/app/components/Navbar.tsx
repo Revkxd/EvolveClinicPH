@@ -28,7 +28,7 @@ export default function Navbar() {
   }
 
   return (
-    <nav className={`bg-turq-shaded shadow-lg fixed w-full z-10 transition-transform duration-300 ${visible ? 'translate-y-0' : '-translate-y-full'}`}>
+    <nav className={`bg-turq shadow-lg fixed w-full z-10 transition-transform duration-300 ${visible ? 'translate-y-0' : '-translate-y-full'}`}>
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex justify-between">
           <div className="flex space-x-7">
@@ -54,7 +54,7 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-      <div className={`${isOpen ? 'block' : 'hidden'} md:hidden bg-turq-lightlyshaded`}>
+      <div className={`${isOpen ? 'block' : 'hidden'} md:hidden bg-turq-lighterdefault`}>
         <Link href="/services" className="block py-2 px-5 text-xl text-white hover:text-gray-300 transition duration-300" onClick={closeMenu}>Services</Link>
         <Link href="/bookings" className="block py-2 px-5 text-xl text-white hover:text-gray-300 transition duration-300" onClick={closeMenu}>Bookings</Link>
         <Link href="/about" className="block py-2 px-5 text-xl text-white hover:text-gray-300 transition duration-300" onClick={closeMenu}>About Us</Link>
