@@ -1,6 +1,7 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
+import { lexendDeca } from './fonts'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import { SpeedInsights } from '@vercel/speed-insights/next'
@@ -18,8 +19,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={`${inter.className} custom-scrollbar bg-gray-100`}>
+    <html lang="en" className={`scroll-smooth ${lexendDeca.variable}`}>
+      <body className={`${inter.className} custom-scrollbar bg-gray-100 font-sans`}>
         <SpeedInsights />
         <div className='flex flex-col min-h-screen'>
           <Navbar />

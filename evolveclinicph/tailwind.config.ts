@@ -18,6 +18,13 @@ export default {
           light: '#67f2e3',
         },
       },
+      fontFamily: {
+        sans: ['var(--font-lexend-deca)', 'Inter', 'system-ui', 'sans-serif'],
+      },
+      fontWeight: {
+        normal: '400',
+        bold: '700',
+      }
     },
   },
   plugins: [
