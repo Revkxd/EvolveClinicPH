@@ -13,6 +13,7 @@ export default {
         foreground: "var(--foreground)",
         turq: {
           DEFAULT: '#31a99e',
+          lightlyshaded: '#229191',
           shaded: '#1c7878',
           light: '#67f2e3',
         },
