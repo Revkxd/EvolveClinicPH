@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import NavOptions from './NavOptions'
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
@@ -28,21 +29,18 @@ export default function Navbar() {
   }
 
   return (
-    <nav className={`bg-turq shadow-lg fixed w-full z-10 transition-transform duration-300 ${visible ? 'translate-y-0' : '-translate-y-full'}`}>
+    <nav className={`bg-turq shadow-lg fixed w-full z-10 transition-transform duration-300 ${visible ? 'translate-y-0' : '-translate-y-full'}`} aria-label='primary menu'>
       <div className="max-w-6xl mx-auto px-4">
         <div className="flex justify-between">
           <div className="flex space-x-7">
             <div>
-              <Link href="/" className="flex items-center py-4 px-2">
+              <Link href="/" className="flex items-center py-4 px-2" aria-label='home'>
                 <Image src="/primary-light.png" alt="Evolve Clinic PH Logo" width={130} height={130} />
               </Link>
             </div>
           </div>
           <div className="hidden md:flex items-center space-x-1">
-            <Link href="/services" className="py-4 px-4 text-white text-3xl font-semibold hover:text-gray-300 transition duration-300">Services</Link>
-            <Link href="/bookings" className="py-4 px-4 text-white text-3xl font-semibold hover:text-gray-300 transition duration-300">Bookings</Link>
-            <Link href="/about" className="py-4 px-4 text-white text-3xl font-semibold hover:text-gray-300 transition duration-300">About Us</Link>
-            <Link href="/contact" className="py-4 px-4 text-white text-3xl font-semibold hover:text-gray-300 transition duration-300">Contact Us</Link>
+            <NavOptions classes="py-4 px-4 text-white text-3xl font-semibold hover:text-gray-300 transition duration-300" />
           </div>
           <div className="md:hidden flex items-center">
             <button className="outline-none mobile-menu-button" onClick={() => setIsOpen(!isOpen)}>
@@ -55,10 +53,7 @@ export default function Navbar() {
         </div>
       </div>
       <div className={`${isOpen ? 'block' : 'hidden'} md:hidden bg-turq-lighterdefault`}>
-        <Link href="/services" className="block py-2 px-5 text-xl text-white hover:text-gray-300 transition duration-300" onClick={closeMenu}>Services</Link>
-        <Link href="/bookings" className="block py-2 px-5 text-xl text-white hover:text-gray-300 transition duration-300" onClick={closeMenu}>Bookings</Link>
-        <Link href="/about" className="block py-2 px-5 text-xl text-white hover:text-gray-300 transition duration-300" onClick={closeMenu}>About Us</Link>
-        <Link href="/contact" className="block py-2 px-5 text-xl text-white hover:text-gray-300 transition duration-300" onClick={closeMenu}>Contact Us</Link>
+        <NavOptions classes="block py-2 px-5 text-xl text-white hover:text-gray-300 transition duration-300" onClickFunction={closeMenu} />
       </div>
     </nav>
   )

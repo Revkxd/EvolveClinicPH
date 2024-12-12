@@ -3,3 +3,8 @@ export interface HomePageProps {
   header?: string;
   headerTextStyle?: string;
 }
+
+export interface NavOptionsProps {
+  classes: string;
+  onClickFunction?: () => void;
+}
