@@ -30,7 +30,7 @@ export default function ServiceBox({ category, services }: ServiceBoxProps) {
   }
 
   return (
-    <div className="bg-teal-50 p-4 rounded-lg shadow-md h-[450px] flex flex-col justify-between overflow-y-auto">
+    <div className="bg-teal-50 p-4 rounded-lg shadow-lg h-[450px] flex flex-col flex-shrink-0 justify-between overflow-y-auto w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1rem)]">
       <div>
         <h3 className="text-xl font-bold mb-2 text-turq-shaded">{category}</h3>
         <h4 className="text-lg font-medium mb-2 text-turq">{services[currentIndex].title}</h4>

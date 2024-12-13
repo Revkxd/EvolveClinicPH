@@ -1,5 +1,7 @@
 'use client'
 
+import { useState, useRef } from 'react';
+import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { HomePageProps } from '@/types/props'
 import ServiceBox from '../ServiceBox'
 import WideServiceBox from '../WideServiceBox'
@@ -275,22 +277,70 @@ const slimmingAndContouring = [
 // #endregion
 
 export default function ServicesComponent({ isHomePage }: HomePageProps) {
+  const scrollContainerRef = useRef<HTMLDivElement>(null)
+  const [canScrollLeft, setCanScrollLeft] = useState(false)
+  const [canScrollRight, setCanScrollRight] = useState(true)
+
+  const scroll = (direction: 'left' | 'right') => {
+    const container = scrollContainerRef.current
+    if (container) {
+      const scrollAmount = container.clientWidth
+      const newScrollPosition = direction === 'left'
+        ? container.scrollLeft - scrollAmount
+        : container.scrollLeft + scrollAmount
+      
+      container.scrollTo({
+        left: newScrollPosition,
+        behavior: 'smooth'
+      })
+    }
+  }
+
+  const checkScrollability = () => {
+    const container = scrollContainerRef.current
+    if (container) {
+      setCanScrollLeft(container.scrollLeft > 0)
+      setCanScrollRight(container.scrollLeft < container.scrollWidth - container.clientWidth)
+    }
+  }
+
   return (
     <section id="services" className="py-20">
-      <h2 className="text-5xl font-bold mb-8 text-center">Facials and Cosmetic Services</h2>
+      <h2 className="text-5xl font-bold mb-8 text-center">Facials and Dermatologic Services</h2>
       <div className={`max-w-6xl mx-auto px-4 ${isHomePage ? 'max-h-[520px] overflow-y-scroll custom-scrollbar' : ''}`}>
         <div className="py-4">
           <WideServiceBox category="Facial Services" services={facialServices} />
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          <ServiceBox category="Laser Procedures" services={laserProcedures} />
-          <ServiceBox category="Skin Resurfacing" services={skinResurfacing} />
-          <ServiceBox category="Hair Removal" services={laserHairRemoval} />
-          <ServiceBox category="Acne Scars" services={acneScars} />
-          <ServiceBox category="Wart Removal" services={wartsRemoval} />
-          <ServiceBox category="Injectables - Subtle Enhancements, Dramatic Results" services={injectables} />
-          <ServiceBox category="Toxin Injections" services={toxinInjections} />
-          <ServiceBox category="Slimming and Contouring" services={slimmingAndContouring} />
+        <div className="relative max-w-6xl mx-auto">
+          <button 
+            onClick={() => scroll('left')} 
+            className={`hidden sm:block absolute left-0 top-1/2 transform -translate-y-1/2 p-2 rounded-full shadow-md z-10 ${!canScrollLeft ? 'opacity-50 cursor-not-allowed' : 'bg-turq text-white hover:bg-turq-shaded'}`}
+            disabled={!canScrollLeft}
+          >
+            <ChevronLeft size={24} />
+          </button>
+          <div 
+            ref={scrollContainerRef} 
+            className="flex flex-nowrap overflow-x-scroll space-x-4 pb-4 custom-scrollbar gap-1"
+            // className= "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 overflow-x-auto"
+            onScroll={checkScrollability}
+          >
+            <ServiceBox category="Laser Procedures" services={laserProcedures} />
+            <ServiceBox category="Skin Resurfacing" services={skinResurfacing} />
+            <ServiceBox category="Hair Removal" services={laserHairRemoval} />
+            <ServiceBox category="Acne Scars" services={acneScars} />
+            <ServiceBox category="Wart Removal" services={wartsRemoval} />
+            <ServiceBox category="Injectables - Subtle Enhancements, Dramatic Results" services={injectables} />
+            <ServiceBox category="Toxin Injections" services={toxinInjections} />
+            <ServiceBox category="Slimming and Contouring" services={slimmingAndContouring} />
+          </div>
+          <button 
+            onClick={() => scroll('right')} 
+            className={`hidden sm:block absolute right-0 top-1/2 transform -translate-y-1/2 p-2 rounded-full shadow-md z-10 ${!canScrollRight ? 'opacity-50 cursor-not-allowed' : 'bg-turq text-white hover:bg-turq-shaded'}`}
+            disabled={!canScrollRight}
+          >
+            <ChevronRight size={24} />
+          </button>
         </div>
       </div>
     </section>
