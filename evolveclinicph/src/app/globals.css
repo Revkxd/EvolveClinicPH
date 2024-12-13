@@ -20,6 +20,7 @@ body {
 
 /* Custom scrollbar styles */
 .custom-scrollbar::-webkit-scrollbar {
+  display: block;
   width: 6px;
   height: 6px;
 }

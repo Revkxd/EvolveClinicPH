@@ -322,7 +322,6 @@ export default function ServicesComponent({ isHomePage }: HomePageProps) {
           <div 
             ref={scrollContainerRef} 
             className="flex flex-nowrap overflow-x-scroll space-x-4 pb-4 custom-scrollbar gap-1"
-            // className= "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 overflow-x-auto"
             onScroll={checkScrollability}
           >
             <ServiceBox category="Laser Procedures" services={laserProcedures} />
