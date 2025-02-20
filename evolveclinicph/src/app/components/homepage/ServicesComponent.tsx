@@ -6,6 +6,7 @@ import { HomePageProps } from '@/types/props'
 import ServiceBox from '../ServiceBox'
 import WideServiceBox from '../WideServiceBox'
 import BulletedServiceBox from '../BulletedServiceBox';
+import ServiceBoxContainer from '../ServiceBoxContainer';
 
 // #region SERVICES_LIST
 const facialServices = [
@@ -275,28 +276,36 @@ const slimmingAndContouring = [
       the treatment areas.`
   },
 ]
-const surgicalServicesFace = [
-  "Upper Blepharoplasty (Surgical Eyelid Rejuvenation)",
-  "Lower Blepharoplasty (Surgical Eyebag Removal)",
-  "Brow Lift",
-  "Temporal Lift",
-  "Otoplasty (Ear Tuck)",
-  "Surgical Face Lift",
-  "Buccal Fat Removal",
-  "Submental Liposuction",
-  "Goretex Rhinoplasty",
-  "Silicone Rhinoplasty",
-  "Alar Trimming",
-  "Tip Plasty",
-  "Chin Augmentation (Mentoplasty)",
-]
-const surgicalServicesBody = [
-  "Breast Augmentation",
-  "Breast Lift",
-  "Vaser Liposuction",
-  "Abdominoplasty (Tummy Tuck)",
-  "Arm Liposuction",
-  "Brazilian Butt Lift (BBL)",
+const surgicalServices = [
+  {
+    category: "Face",
+    services: [
+      "Upper Blepharoplasty (Surgical Eyelid Rejuvenation)",
+      "Lower Blepharoplasty (Surgical Eyebag Removal)",
+      "Brow Lift",
+      "Temporal Lift",
+      "Otoplasty (Ear Tuck)",
+      "Surgical Face Lift",
+      "Buccal Fat Removal",
+      "Submental Liposuction",
+      "Goretex Rhinoplasty",
+      "Silicone Rhinoplasty",
+      "Alar Trimming",
+      "Tip Plasty",
+      "Chin Augmentation (Mentoplasty)",
+    ],
+  },
+  {
+    category: "Body",
+    services: [
+      "Breast Augmentation",
+      "Breast Lift",
+      "Vaser Liposuction",
+      "Abdominoplasty (Tummy Tuck)",
+      "Arm Liposuction",
+      "Brazilian Butt Lift (BBL)",
+    ],
+  },
 ]
 // #endregion
 
@@ -330,8 +339,8 @@ export default function ServicesComponent({ isHomePage }: HomePageProps) {
 
   return (
     <section id="services" className="py-20">
-      <h2 className="text-5xl font-bold mb-8 text-center">Facials and Dermatologic Services</h2>
-      <div className={`max-w-6xl mx-auto px-4 ${isHomePage ? 'max-h-[560px] overflow-y-scroll custom-scrollbar' : ''}`}>
+      <h2 className="text-5xl font-bold mb-8 text-center">Facials, Dermatologic & Surgical Services</h2>
+      <div className={`max-w-6xl mx-auto px-4 ${isHomePage ? 'max-h-[700px] overflow-y-scroll custom-scrollbar' : ''}`}>
         <div className="py-4">
           <WideServiceBox category="Facial Services" services={facialServices} />
         </div>
@@ -366,9 +375,14 @@ export default function ServicesComponent({ isHomePage }: HomePageProps) {
           </button>
         </div>
         <div className="flex flex-nowrap overflow-x-scroll custom-scrollbar gap-1 py-4">
-          <BulletedServiceBox category="Surgical Services - Face" services={surgicalServicesFace} />
-          <BulletedServiceBox category="Surgical Services - Body" services={surgicalServicesBody} />
+          {/* <BulletedServiceBox category="Surgical Services - Face" services={surgicalServicesFace} /> */}
+          {/* <BulletedServiceBox category="Surgical Services - Body" services={surgicalServicesBody} /> */}
         </div>
+        <ServiceBoxContainer title='Surgical Services'>
+          {surgicalServices.map((group, index) => (
+            <BulletedServiceBox key={index} category={group.category} services={group.services} />
+          ))}
+        </ServiceBoxContainer>
       </div>
     </section>
   )
