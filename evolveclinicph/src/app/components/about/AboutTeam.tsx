@@ -7,7 +7,7 @@ const TEAM_MEMBERS = [
     name: "Dr. Jacqueline Cua-Lim",
     role: "Ear, Nose, and Throat (ENT) - Head and Neck surgeon",
     bio: "Dr. Jacqueline Cua-Lim is an Ear, Nose, and Throat (ENT)- Head and Neck surgeon with specialized expertise in facial aesthetic surgery and cosmetic procedures. With a strong foundation in otolaryngology, Dr. Cua-Lim has dedicated years of advanced training and practice to enhancing patients’ facial features through both functional and aesthetic approaches.",
-    image: "/doctors/IMG_3801.jpg?height=400&width=400",
+    image: "/doctors/DocCuaLim.png",
   },
   {
     name: "Dr. Cristina Cuenca",
