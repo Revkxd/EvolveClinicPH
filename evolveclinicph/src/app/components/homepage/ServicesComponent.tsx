@@ -374,10 +374,6 @@ export default function ServicesComponent({ isHomePage }: HomePageProps) {
             <ChevronRight size={24} />
           </button>
         </div>
-        <div className="flex flex-nowrap overflow-x-scroll custom-scrollbar gap-1 py-4">
-          {/* <BulletedServiceBox category="Surgical Services - Face" services={surgicalServicesFace} /> */}
-          {/* <BulletedServiceBox category="Surgical Services - Body" services={surgicalServicesBody} /> */}
-        </div>
         <ServiceBoxContainer title='Surgical Services'>
           {surgicalServices.map((group, index) => (
             <BulletedServiceBox key={index} category={group.category} services={group.services} />
