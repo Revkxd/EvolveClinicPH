@@ -17,7 +17,7 @@ const TEAM_MEMBERS = [
     As a board-certified dermatologist, 
     She offers comprehensive dermatologic services designed to address a wide range of skin conditions. Whether you’re seeking treatment for acne, eczema, or simply want to maintain healthy, youthful skin,  her team is there to help. 
     `,
-    image: "/placeholder.svg?height=400&width=400",
+    image: "",
   },
 ]
 
@@ -32,7 +32,7 @@ export default function AboutTeam() {
             <div key={index} className="bg-teal-50 rounded-xl overflow-hidden shadow-md flex flex-col">
               <div className="relative h-96 md:h-[400px] lg:h-[450px] w-full">
                 <Image
-                  src={member.image || "/placeholder.svg"}
+                  src={member.image || "/blank.png"}
                   alt={member.name}
                   fill
                   className="object-cover object-top"
