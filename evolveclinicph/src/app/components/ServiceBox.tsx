@@ -45,7 +45,7 @@ export default function ServiceBox({ category, services }: ServiceBoxProps) {
             <button
               key={index}
               onClick={() => goToService(index)}
-              className={`w-2 h-2 rounded-full ${
+              className={`w-3 h-3 rounded-full ${
                 index === currentIndex ? 'bg-turq' : 'bg-gray-200'
               } transition-colors duration-300`}
               aria-label={`Go to service ${index + 1}`}
@@ -55,7 +55,7 @@ export default function ServiceBox({ category, services }: ServiceBoxProps) {
         <div className="flex justify-between items-center w-full">
           <button 
             onClick={prevService}
-            className={`p-1 rounded-full ${services.length <= 1 ? 'bg-gray-300 text-gray-500 cursor-not-allowed' : 'bg-turq text-white hover:bg-turq-shaded'} transition duration-300`}
+            className={`p-1 rounded-full ${services.length <= 1 ? 'hidden' : 'bg-turq text-white hover:bg-turq-shaded'} transition duration-300`}
             aria-label="Previous service"
             disabled={services.length <= 1}  // Disable button if services length is <= 1
           >
@@ -63,7 +63,7 @@ export default function ServiceBox({ category, services }: ServiceBoxProps) {
           </button>
           <button 
             onClick={nextService}
-            className={`p-1 rounded-full ${services.length <= 1 ? 'bg-gray-300 text-gray-500 cursor-not-allowed' : 'bg-turq text-white hover:bg-turq-shaded'} transition duration-300`}
+            className={`p-1 rounded-full ${services.length <= 1 ? 'hidden' : 'bg-turq text-white hover:bg-turq-shaded'} transition duration-300`}
             aria-label="Next service"
             disabled={services.length <= 1}  // Disable button if services length is <= 1
           >

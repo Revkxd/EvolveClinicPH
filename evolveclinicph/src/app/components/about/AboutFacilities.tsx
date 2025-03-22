@@ -119,7 +119,7 @@ export default function AboutFacilities() {
               <button
                 key={index}
                 onClick={() => goToSlide(index)}
-                className={`w-2 h-2 rounded-full transition-colors duration-300 ${
+                className={`w-3 h-3 rounded-full transition-colors duration-300 ${
                   index === currentIndex ? "bg-turq" : "bg-gray-200"
                 }`}
                 aria-label={`Go to image ${index + 1}`}

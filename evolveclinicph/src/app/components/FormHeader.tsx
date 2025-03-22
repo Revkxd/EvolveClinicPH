@@ -9,7 +9,7 @@ export default function FormHeader({ isHomePage, header, headerTextStyle }: Home
         <Image src="/logo-smalt-blue.png" alt="Evolve Clinic PH Logo" width={90} height={90} className="mr-4 mb-4"/> :
         <Image src="/secondary-smalt-blue.png" alt="Evolve Clinic PH Logo" width={300} height={300} className="mr-4 mb-4"/>
       }
-      <h2 className={`${headerTextStyle} font-bold mb-8 text-center`}>{header}</h2>
+      <h2 className={`${headerTextStyle} font-bold mb-8 text-center`} aria-label={`$header`}>{header}</h2>
     </div>
     </>
   );

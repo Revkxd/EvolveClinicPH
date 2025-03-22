@@ -24,7 +24,7 @@ export default function  ServiceBoxContainer({ title, children }: ServiceBoxCont
   return (
     <div className="bg-teal-50 p-4 rounded-lg shadow-md w-full h-[640px] flex flex-col justify-between">
       <h3 className="text-xl font-bold mb-2 text-turq-shaded">{title}</h3>
-      <div className="h-5/6 overflow-y-auto mb-4">{children[currentIndex]}</div>
+      <div className="h-5/6 overflow-y-auto mb-4 custom-scrollbar">{children[currentIndex]}</div>
       <div className="flex justify-between items-center">
         <button
           onClick={prevService}
@@ -38,7 +38,7 @@ export default function  ServiceBoxContainer({ title, children }: ServiceBoxCont
             <button
               key={index}
               onClick={() => setCurrentIndex(index)}
-              className={`w-2 h-2 rounded-full transition-colors duration-300 ${
+              className={`w-3 h-3 rounded-full transition-colors duration-300 ${
                 index === currentIndex ? "bg-turq" : "bg-gray-200"
               }`}
               aria-label={`Go to service group ${index + 1}`}
