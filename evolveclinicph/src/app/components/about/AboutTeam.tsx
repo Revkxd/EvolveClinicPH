@@ -29,8 +29,8 @@ export default function AboutTeam() {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {TEAM_MEMBERS.map((member, index) => (
-            <div key={index} className="bg-teal-50 rounded-xl overflow-hidden shadow-md flex flex-col">
-              <div className="relative h-96 md:h-[400px] lg:h-[450px] w-full">
+            <div key={index} className="bg-white rounded-xl overflow-hidden shadow-md">
+              <div className="relative h-[28rem] md:h-[30rem] lg:h-[32rem] w-full">
                 <Image
                   src={member.image || "/blank.png"}
                   alt={member.name}
@@ -38,12 +38,10 @@ export default function AboutTeam() {
                   className="object-cover object-top"
                 />
               </div>
-              <div className="p-6">
-                <div className="flex justify-between items-start">
-                  <div>
-                    <h3 className="text-xl font-semibold text-black">{member.name}</h3>
-                    <p className="text-turq-shaded font-medium mb-3">{member.role}</p>
-                  </div>
+              <div className="p-6 -mt-[5rem] relative z-10 bg-white min-h-[12.5rem]">
+                <div>
+                  <h3 className="text-xl font-semibold text-black">{member.name}</h3>
+                  <p className="text-turq-shaded font-medium mb-3">{member.role}</p>
                 </div>
                 <p className="text-black text-sm">{member.bio}</p>
               </div>
