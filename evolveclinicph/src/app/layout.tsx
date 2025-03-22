@@ -5,6 +5,7 @@ import { lexendDeca } from './fonts'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
 import { SpeedInsights } from '@vercel/speed-insights/next'
+import { Analytics } from "@vercel/analytics/react"
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -37,6 +38,7 @@ export default function RootLayout({
     <html lang="en" className={`scroll-smooth ${lexendDeca.variable}`}>
       <body className={`${inter.className} custom-scrollbar bg-gray-100 font-sans`}>
         <SpeedInsights />
+        <Analytics />
         <div className='flex flex-col min-h-screen'>
           <Navbar />
           <main className='flex-grow pt-24 md:pt-32'>
