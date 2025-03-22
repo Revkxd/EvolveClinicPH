@@ -38,7 +38,7 @@ export default function AboutTeam() {
                   className="object-cover object-top"
                 />
               </div>
-              <div className="p-6 -mt-[5rem] relative z-10 bg-white min-h-[12.5rem]">
+              <div className="p-6 -mt-[5rem] relative bg-white min-h-[12.5rem]">
                 <div>
                   <h3 className="text-xl font-semibold text-black">{member.name}</h3>
                   <p className="text-turq-shaded font-medium mb-3">{member.role}</p>
