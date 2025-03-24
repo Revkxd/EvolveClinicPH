@@ -6,7 +6,7 @@ export default function ContactComponent({ isHomePage }: HomePageProps) {
     <section id="contact" className="px-4 py-6 pt-16">
       <FormHeader isHomePage={isHomePage} header="Contact Us" headerTextStyle="text-5xl" />
       <div className="max-w-3xl mx-auto">
-        <div className={isHomePage ? "" : "grid md:grid-cols-2 gap-8"}>
+        <div className={isHomePage ? "flex justify-center" : "grid md:grid-cols-2 gap-8"}>
           <div className="text-center">
             <p className="text-xl mb-2">
               <span className="font-semibold">Phone: </span>
