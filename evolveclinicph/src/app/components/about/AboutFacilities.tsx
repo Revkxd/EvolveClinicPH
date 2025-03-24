@@ -95,7 +95,7 @@ export default function AboutFacilities() {
                 e.stopPropagation()
                 prevSlide()
               }}
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-turq/60 p-2 rounded-full shadow-md z-10 text-white hover:bg-turq-shaded transition-colors"
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-turq/60 p-2 rounded-full shadow-md z-3 text-white hover:bg-turq-shaded transition-colors"
               aria-label="Previous facility image"
             >
               <ChevronLeft size={24} />
@@ -106,7 +106,7 @@ export default function AboutFacilities() {
                 e.stopPropagation()
                 nextSlide()
               }}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-turq/60 p-2 rounded-full shadow-md z-10 text-white hover:bg-turq-shaded transition-colors"
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-turq/60 p-2 rounded-full shadow-md z-3 text-white hover:bg-turq-shaded transition-colors"
               aria-label="Next facility image"
             >
               <ChevronRight size={24} />
