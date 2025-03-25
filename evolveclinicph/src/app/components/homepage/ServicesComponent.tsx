@@ -391,8 +391,8 @@ export default function ServicesComponent({ isHomePage }: HomePageProps) {
       <div className="flex justify-center mt-4">
         <Link
           href="/services"
-          className="bg-turq text-white px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-3 rounded-full shadow-md
-          font-medium text-sm sm:text-base md:text-lg transition-all duration-300
+          className="bg-turq text-white px-12 py-4 sm:px-8 sm:py-3 md:px-16 md:py-4 rounded-full shadow-md
+          font-medium text-base sm:text-lg md:text-xl transition-all duration-300
           hover:bg-turq-shaded hover:shadow-lg transform hover:scale-105"
         >
           More Services
