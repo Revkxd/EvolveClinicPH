@@ -28,6 +28,9 @@ export default function Navbar() {
     setIsOpen(false)
   }
 
+  const desktopButtonStyle = "py-3 px-6 ml-2 bg-white text-turq text-2xl font-semibold rounded-full hover:bg-gray-100 transition duration-300 shadow-md"
+  const mobileButtonStyle = "py-2 px-4 bg-white text-turq text-lg font-semibold rounded-full hover:bg-gray-100 transition duration-300 shadow-md"
+
   return (
     <nav className={`bg-turq shadow-lg fixed w-full z-10 transition-transform duration-300 ${visible ? 'translate-y-0' : '-translate-y-full'}`} aria-label='primary menu'>
       <div className="max-w-6xl mx-auto px-4">
@@ -40,12 +43,30 @@ export default function Navbar() {
             </div>
           </div>
           <div className="hidden md:flex items-center space-x-1">
-            <NavOptions classes="py-4 px-4 text-white text-3xl font-semibold hover:text-gray-300 transition duration-300" />
+            <NavOptions
+              classes="py-4 px-4 text-white text-3xl font-semibold hover:text-gray-300 transition duration-300"
+              buttonStyle={desktopButtonStyle}
+            />
           </div>
-          <div className="md:hidden flex items-center">
-            <button className="outline-none mobile-menu-button" onClick={() => setIsOpen(!isOpen)}>
-              <svg className="w-10 h-10 text-white hover:text-gray-300"
-                fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" viewBox="0 0 24 24" stroke="currentColor">
+          <div className="md:hidden flex items-center space-x-3">
+            <Link href="/contact" aria-label="contact info" className={mobileButtonStyle}>
+              Contact Us
+            </Link>
+
+            <button
+              className="outline-none mobile-menu-button"
+              onClick={() => setIsOpen(!isOpen)}
+              aria-label="Toggle menu"
+            >
+              <svg
+                className="w-10 h-10 text-white hover:text-gray-300"
+                fill="none"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
                 <path d="M4 6h16M4 12h16M4 18h16"></path>
               </svg>
             </button>
@@ -53,7 +74,12 @@ export default function Navbar() {
         </div>
       </div>
       <div className={`${isOpen ? 'block' : 'hidden'} md:hidden bg-turq-lighterdefault`}>
-        <NavOptions classes="block py-2 px-5 text-xl text-white hover:text-gray-300 transition duration-300" onClickFunction={closeMenu} />
+        <NavOptions
+          classes="block py-2 px-5 text-xl text-white hover:text-gray-300 transition duration-300"
+          onClickFunction={closeMenu}
+          buttonStyle={mobileButtonStyle}
+          excludeContact={true}
+        />
       </div>
     </nav>
   )

@@ -7,4 +7,6 @@ export interface HomePageProps {
 export interface NavOptionsProps {
   classes: string;
   onClickFunction?: () => void;
+  buttonStyle?: string;
+  excludeContact?: boolean;
 }
