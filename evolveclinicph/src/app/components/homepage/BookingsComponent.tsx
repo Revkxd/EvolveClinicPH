@@ -140,15 +140,15 @@ export default function BookingsComponent({ isHomePage }: HomePageProps) {
       <form className="max-w-md mx-auto">
         <div className="mb-4">
           <label htmlFor="name" className="block mb-2">Name</label>
-          <input type="text" id="name" name="name" className="w-full p-2 border rounded" required placeholder="Name"/>
+          <input type="text" id="name" name="name" className="w-full p-2 border rounded-lg" required placeholder="Name"/>
         </div>
         <div className="mb-4">
           <label htmlFor="email" className="block mb-2">Email</label>
-          <input type="email" id="email" name="email" className="w-full p-2 border rounded" required placeholder="Email Address"/>
+          <input type="email" id="email" name="email" className="w-full p-2 border rounded-lg" required placeholder="Email Address"/>
         </div>
         <div className="mb-4">
           <label htmlFor="service" className="block mb-2">Service</label>
-          <select id="service" name="service" className="w-full p-2 border rounded" required>
+          <select id="service" name="service" className="w-full p-2 border rounded-lg" required>
             <option key="invalid" value="invalid" disabled>SELECT A SERVICE</option>
             {allServices.map((service) => (
               <option key={service.key} value={service.key}>{service.name}</option>
@@ -157,9 +157,9 @@ export default function BookingsComponent({ isHomePage }: HomePageProps) {
         </div>
         <div className="mb-4">
           <label htmlFor="date" className="block mb-2">Preferred Date</label>
-          <input type="date" id="date" name="date" className="w-full p-2 border rounded" required min={new Date().toISOString().split("T")[0]} />
+          <input type="date" id="date" name="date" className="w-full p-2 border rounded-lg" required min={new Date().toISOString().split("T")[0]} />
         </div>
-        <button type="submit" className="w-full bg-turq text-white p-2 rounded hover:bg-turq-shaded transition duration-300">Book Now</button>
+        <button type="submit" className="w-full bg-turq text-white p-2 rounded-lg hover:bg-turq-shaded transition duration-300 transform hover:scale-105">Book Now</button>
       </form>
     </section>
   )

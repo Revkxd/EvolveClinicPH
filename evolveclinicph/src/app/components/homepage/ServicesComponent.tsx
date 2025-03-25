@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useRef } from 'react';
+import Link from "next/link"
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { HomePageProps } from '@/types/props'
 import ServiceBox from '../ServiceBox'
@@ -340,15 +341,18 @@ export default function ServicesComponent({ isHomePage }: HomePageProps) {
   return (
     <section id="services" className="py-20">
       <h2 className="text-5xl font-bold mb-8 text-center">Facials, Dermatologic & Surgical Services</h2>
-      <div className={`max-w-6xl mx-auto px-4 ${isHomePage ? 'max-h-[700px] overflow-y-scroll custom-scrollbar' : ''}`}>
+      <div className={`max-w-6xl mx-auto px-4 ${isHomePage ? 'max-h-[40rem] overflow-y-auto custom-scrollbar' : ''}`}>
         <div className="py-4">
           <WideServiceBox category="Facial Services" services={facialServices} />
         </div>
+        {!isHomePage && (<>
         <div className="relative max-w-6xl mx-auto">
           <button 
             onClick={() => scroll('left')} 
-            className={`hidden sm:block absolute left-0 top-1/2 transform -translate-y-1/2 p-2 rounded-full shadow-md z-10 ${!canScrollLeft ? 'opacity-50 cursor-not-allowed' : 'bg-turq text-white hover:bg-turq-shaded'}`}
-            disabled={!canScrollLeft}
+            className={`absolute left-0 top-1/2 transform -translate-y-1/2 p-2 rounded-full shadow-md z-10
+              ${!canScrollLeft ? 'opacity-50 cursor-not-allowed' : 'bg-turq text-white hover:bg-turq-shaded'}
+              transform hover:scale-105`}
+            hidden={!canScrollLeft}
           >
             <ChevronLeft size={24} />
           </button>
@@ -368,8 +372,10 @@ export default function ServicesComponent({ isHomePage }: HomePageProps) {
           </div>
           <button 
             onClick={() => scroll('right')} 
-            className={`hidden sm:block absolute right-0 top-1/2 transform -translate-y-1/2 p-2 rounded-full shadow-md z-10 ${!canScrollRight ? 'opacity-50 cursor-not-allowed' : 'bg-turq text-white hover:bg-turq-shaded'}`}
-            disabled={!canScrollRight}
+            className={`absolute right-0 top-1/2 transform -translate-y-1/2 p-2 rounded-full shadow-md z-10
+              ${!canScrollRight ? 'opacity-50 cursor-not-allowed' : 'bg-turq text-white hover:bg-turq-shaded'}
+              transform hover:scale-105`}
+            hidden={!canScrollRight}
           >
             <ChevronRight size={24} />
           </button>
@@ -379,7 +385,20 @@ export default function ServicesComponent({ isHomePage }: HomePageProps) {
             <BulletedServiceBox key={index} category={group.category} services={group.services} />
           ))}
         </ServiceBoxContainer>
+        </>)}
       </div>
+      {isHomePage && (
+      <div className="flex justify-center mt-4">
+        <Link
+          href="/services"
+          className="bg-turq text-white px-4 py-2 sm:px-6 sm:py-3 md:px-8 md:py-3 rounded-full shadow-md
+          font-medium text-sm sm:text-base md:text-lg transition-all duration-300
+          hover:bg-turq-shaded hover:shadow-lg transform hover:scale-105"
+        >
+          More Services
+        </Link>
+      </div>
+      )}
     </section>
   )
 }

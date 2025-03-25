@@ -15,7 +15,7 @@ export default function NotFound() {
         <h1 className="text-5xl font-bold mb-8 text-turq-shaded">PAGE DOES NOT EXIST</h1>
         <Link 
           href="/" 
-          className="bg-turq hover:bg-turq-shaded text-2xl text-white font-bold py-2 px-4 rounded transition duration-300"
+          className="bg-turq hover:bg-turq-shaded text-2xl text-white font-bold py-2 px-4 rounded-xl transition duration-300"
         >
           Go Back Home
         </Link>

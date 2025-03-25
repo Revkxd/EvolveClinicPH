@@ -21,6 +21,7 @@ export default function  ServiceBoxContainer({ title, children }: ServiceBoxCont
     setCurrentIndex((prevIndex) => (prevIndex - 1 + children.length) % children.length)
   }
 
+  const chevronButtonStyle = "p-1 rounded-full bg-turq text-white hover:bg-turq-shaded transition duration-300 transform hover:scale-105"
   return (
     <div className="bg-teal-50 p-4 rounded-lg shadow-md w-full h-[640px] flex flex-col justify-between">
       <h3 className="text-xl font-bold mb-2 text-turq-shaded">{title}</h3>
@@ -28,10 +29,10 @@ export default function  ServiceBoxContainer({ title, children }: ServiceBoxCont
       <div className="flex justify-between items-center">
         <button
           onClick={prevService}
-          className="p-1 rounded-full bg-turq text-white hover:bg-turq-shaded transition duration-300"
+          className={chevronButtonStyle}
           aria-label="Previous service group"
         >
-          <ChevronLeft size={20} />
+          <ChevronLeft size={24} />
         </button>
         <div className="flex space-x-2">
           {children.map((_, index) => (
@@ -47,10 +48,10 @@ export default function  ServiceBoxContainer({ title, children }: ServiceBoxCont
         </div>
         <button
           onClick={nextService}
-          className="p-1 rounded-full bg-turq text-white hover:bg-turq-shaded transition duration-300"
+          className={chevronButtonStyle}
           aria-label="Next service group"
         >
-          <ChevronRight size={20} />
+          <ChevronRight size={24} />
         </button>
       </div>
     </div>

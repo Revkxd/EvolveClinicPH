@@ -28,8 +28,8 @@ export default function Navbar() {
     setIsOpen(false)
   }
 
-  const desktopButtonStyle = "py-3 px-6 ml-2 bg-white text-turq text-2xl font-semibold rounded-full hover:bg-gray-100 transition duration-300 shadow-md"
-  const mobileButtonStyle = "py-2 px-4 bg-white text-turq text-lg font-semibold rounded-full hover:bg-gray-100 transition duration-300 shadow-md"
+  const desktopButtonStyle = "py-3 px-6 ml-2 bg-white text-turq text-2xl font-semibold rounded-full hover:bg-gray-100 transition duration-200 shadow-md transform hover:scale-105"
+  const mobileButtonStyle = "py-2 px-4 bg-white text-turq text-lg font-semibold rounded-full hover:bg-gray-100 transition duration-200 shadow-md transform hover:scale-105"
 
   return (
     <nav className={`bg-turq shadow-lg fixed w-full z-10 transition-transform duration-300 ${visible ? 'translate-y-0' : '-translate-y-full'}`} aria-label='primary menu'>
@@ -37,14 +37,14 @@ export default function Navbar() {
         <div className="flex justify-between">
           <div className="flex space-x-7">
             <div>
-              <Link href="/" className="flex items-center py-4 px-2" aria-label='home'>
+              <Link href="/" className="flex items-center py-4 px-2 transform hover:scale-105" aria-label='home'>
                 <Image src="/primary-light.webp" alt="Evolve Clinic PH Logo" width={130} height={130} priority />
               </Link>
             </div>
           </div>
           <div className="hidden md:flex items-center space-x-1">
             <NavOptions
-              classes="py-4 px-4 text-white text-3xl font-semibold hover:text-gray-300 transition duration-300"
+              classes="py-4 px-4 text-white text-3xl font-semibold hover:text-gray-300 transition duration-150 transform hover:scale-105"
               buttonStyle={desktopButtonStyle}
             />
           </div>

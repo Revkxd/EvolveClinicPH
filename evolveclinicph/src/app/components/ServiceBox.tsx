@@ -29,6 +29,7 @@ export default function ServiceBox({ category, services }: ServiceBoxProps) {
     setCurrentIndex(index)
   }
 
+  const chevronButtonStyle = `p-1 rounded-full ${services.length <= 1 ? 'hidden' : 'bg-turq text-white hover:bg-turq-shaded'} transition duration-300 transform hover:scale-105`
   return (
     <div className="bg-teal-50 p-4 rounded-lg shadow-lg h-[450px] flex flex-col flex-shrink-0 justify-between overflow-y-auto w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1rem)]">
       <div>
@@ -55,7 +56,7 @@ export default function ServiceBox({ category, services }: ServiceBoxProps) {
         <div className="flex justify-between items-center w-full">
           <button 
             onClick={prevService}
-            className={`p-1 rounded-full ${services.length <= 1 ? 'hidden' : 'bg-turq text-white hover:bg-turq-shaded'} transition duration-300`}
+            className={chevronButtonStyle}
             aria-label="Previous service"
             disabled={services.length <= 1}  // Disable button if services length is <= 1
           >
@@ -63,7 +64,7 @@ export default function ServiceBox({ category, services }: ServiceBoxProps) {
           </button>
           <button 
             onClick={nextService}
-            className={`p-1 rounded-full ${services.length <= 1 ? 'hidden' : 'bg-turq text-white hover:bg-turq-shaded'} transition duration-300`}
+            className={chevronButtonStyle}
             aria-label="Next service"
             disabled={services.length <= 1}  // Disable button if services length is <= 1
           >

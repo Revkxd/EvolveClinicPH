@@ -70,6 +70,7 @@ export default function AboutFacilities() {
     setIsPaused(false)
   }
 
+  const chevronButtonStyle = "absolute top-1/2 transform -translate-y-1/2 bg-turq/60 p-2 rounded-full shadow-md z-3 text-white hover:bg-turq-shaded transition-colors transform hover:scale-105"
   return (
     <section className="py-16 rounded-xl">
       <div className="max-w-6xl mx-auto px-4 rounded-xl">
@@ -95,7 +96,7 @@ export default function AboutFacilities() {
                 e.stopPropagation()
                 prevSlide()
               }}
-              className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-turq/60 p-2 rounded-full shadow-md z-3 text-white hover:bg-turq-shaded transition-colors"
+              className={`left-4 ${chevronButtonStyle}`}
               aria-label="Previous facility image"
             >
               <ChevronLeft size={24} />
@@ -106,7 +107,7 @@ export default function AboutFacilities() {
                 e.stopPropagation()
                 nextSlide()
               }}
-              className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-turq/60 p-2 rounded-full shadow-md z-3 text-white hover:bg-turq-shaded transition-colors"
+              className={`right-4 ${chevronButtonStyle}`}
               aria-label="Next facility image"
             >
               <ChevronRight size={24} />

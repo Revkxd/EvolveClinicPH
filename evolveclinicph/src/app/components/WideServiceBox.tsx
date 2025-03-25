@@ -76,17 +76,17 @@ export default function WideServiceBox({ category, services }: WideServiceBoxPro
         <div className="flex justify-between items-center w-full">
           <button 
             onClick={prevService}
-            className="p-1 rounded-full bg-turq text-white hover:bg-turq-shaded transition duration-300"
+            className="p-1 rounded-full bg-turq text-white hover:bg-turq-shaded transition duration-300 transform hover:scale-105"
             aria-label="Previous service"
           >
-            <ChevronLeft size={20} />
+            <ChevronLeft size={24} />
           </button>
           <button 
             onClick={nextService}
-            className="p-1 rounded-full bg-turq text-white hover:bg-turq-shaded transition duration-300"
+            className="p-1 rounded-full bg-turq text-white hover:bg-turq-shaded transition duration-300 transform hover:scale-105"
             aria-label="Next service"
           >
-            <ChevronRight size={20} />
+            <ChevronRight size={24} />
           </button>
         </div>
       </div>
