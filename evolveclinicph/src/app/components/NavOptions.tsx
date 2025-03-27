@@ -7,7 +7,6 @@ export default function NavOptions({ classes, onClickFunction, buttonStyle, excl
   // Regular nav links
   const regularLinks = [
     { href: "/services", label: "services", text: "Services" },
-    { href: "/bookings", label: "appointment bookings", text: "Bookings" },
     { href: "/about", label: "about", text: "About Us" },
   ]
 
