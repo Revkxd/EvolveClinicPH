@@ -12,7 +12,7 @@ const MAP_ZOOM = "18"
 
 export default function ContactComponent({ isHomePage }: HomePageProps) {
   return (
-    <section id="contact" className="px-4 py-6 pt-16">
+    <section id="contact" className="px-4 py-6 pt-20">
       <FormHeader isHomePage={isHomePage} header="Contact Us" headerTextStyle="text-5xl" />
       <div className="max-w-3xl mx-auto">
         <div className={isHomePage ? "flex justify-center" : "grid md:grid-cols-2 gap-8"}>

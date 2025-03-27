@@ -33,9 +33,9 @@ export default function AboutHero() {
   const [firstItem, ...otherItems] = HERO_CONTENT
 
   return (
-    <section className="py-12 md:py-20">
+    <section className="py-20">
       <div className="max-w-6xl mx-auto px-4">
-        <h1 className="text-4xl md:text-5xl font-bold mb-8 text-center text-black">{HERO_TITLE}</h1>
+        <h1 className="text-5xl md:text-5xl font-bold mb-8 text-center text-black">{HERO_TITLE}</h1>
 
         <div className="grid grid-cols-1 gap-3">
           {/* First item spans full width */}

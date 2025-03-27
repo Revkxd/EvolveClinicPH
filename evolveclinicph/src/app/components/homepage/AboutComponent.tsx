@@ -6,7 +6,7 @@ import ContactComponent from "../homepage/ContactComponent"
 
 export default function AboutComponent() {
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto">
       <AboutHero />
       <AboutTeam />
       <AboutFacilities />
