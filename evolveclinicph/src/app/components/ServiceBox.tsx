@@ -12,9 +12,12 @@ interface Service {
 interface ServiceBoxProps {
   category: string
   services: Service[]
+  maxHeight?: string
 }
 
-export default function ServiceBox({ category, services }: ServiceBoxProps) {
+const chevronButtonStyle = "p-1 rounded-full 'bg-turq text-white hover:bg-turq-shaded transition duration-300 transform hover:scale-105"
+
+export default function ServiceBox({ category, services, maxHeight }: ServiceBoxProps) {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   const nextService = () => {
@@ -29,9 +32,8 @@ export default function ServiceBox({ category, services }: ServiceBoxProps) {
     setCurrentIndex(index)
   }
 
-  const chevronButtonStyle = `p-1 rounded-full ${services.length <= 1 ? 'hidden' : 'bg-turq text-white hover:bg-turq-shaded'} transition duration-300 transform hover:scale-105`
   return (
-    <div className="bg-teal-50 p-4 rounded-lg shadow-lg h-[36rem] flex flex-col flex-shrink-0 justify-between overflow-y-auto w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1rem)]">
+    <div className={`bg-teal-50 p-4 rounded-lg shadow-lg ${maxHeight ? `h-[${maxHeight}]` : "h-[36rem]"} flex flex-col flex-shrink-0 justify-between overflow-y-auto w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1rem)]`}>
       <div>
         <h3 className="text-xl font-bold mb-2 text-turq-shaded">{category}</h3>
         <h4 className="text-lg font-medium mb-2 text-turq">{services[currentIndex].title}</h4>
@@ -44,7 +46,7 @@ export default function ServiceBox({ category, services }: ServiceBoxProps) {
       </div>
       <div className="flex flex-col items-center space-y-4">
         <div className="flex justify-center space-x-2">
-          {services.map((_, index) => (
+          {services.length > 1 && services.map((_, index) => (
             <button
               key={index}
               onClick={() => goToService(index)}
@@ -60,7 +62,7 @@ export default function ServiceBox({ category, services }: ServiceBoxProps) {
             onClick={prevService}
             className={chevronButtonStyle}
             aria-label="Previous service"
-            disabled={services.length <= 1}  // Disable button if services length is <= 1
+            hidden={services.length <= 1}  // Disable button if services length is <= 1
           >
             <ChevronLeft size={20} />
           </button>
@@ -68,7 +70,7 @@ export default function ServiceBox({ category, services }: ServiceBoxProps) {
             onClick={nextService}
             className={chevronButtonStyle}
             aria-label="Next service"
-            disabled={services.length <= 1}  // Disable button if services length is <= 1
+            hidden={services.length <= 1}  // Disable button if services length is <= 1
           >
             <ChevronRight size={20} />
           </button>

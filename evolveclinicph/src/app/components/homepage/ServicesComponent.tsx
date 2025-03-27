@@ -290,12 +290,13 @@ export default function ServicesComponent({ isHomePage }: HomePageProps) {
     <section id="services" className={isHomePage ? "py-4" : "py-20"}>
       <h2 className="text-5xl font-bold mb-8 text-center">Facials, Dermatologic & Surgical Services</h2>
       <div className={`max-w-6xl mx-auto px-4 ${isHomePage ? 'max-h-[40rem] overflow-y-auto custom-scrollbar' : ''}`}>
+        {!isHomePage ? <WideServiceBox category="Consultations" services={consultations} maxHeight="4rem"/> : <></>}
         <div className="py-4">
           <WideServiceBox category="Laser Procedures (BODY)" services={laserTreatmentsBody} />
         </div>
         {!isHomePage && (<>
         <div className="relative max-w-6xl mx-auto">
-          <button 
+          <button
             onClick={() => scroll('left')} 
             className={`absolute left-0 top-1/2 transform -translate-y-1/2 p-2 rounded-full shadow-md z-10
               ${!canScrollLeft ? 'opacity-50 cursor-not-allowed' : 'bg-turq text-white hover:bg-turq-shaded'}
@@ -309,7 +310,6 @@ export default function ServicesComponent({ isHomePage }: HomePageProps) {
             className="flex flex-nowrap overflow-x-scroll space-x-4 pb-4 custom-scrollbar gap-1"
             onScroll={checkScrollability}
           >
-            <ServiceBox category="Consultations" services={consultations} />
             <ServiceBox category="Laser Procedures (FACE)" services={laserProceduresFace} />
             <ServiceBox category="Microneedling" services={microneedling} />
             <ServiceBox category="Scar Solutions" services={scarSolutions} />
@@ -317,7 +317,7 @@ export default function ServicesComponent({ isHomePage }: HomePageProps) {
             <ServiceBox category="Slimming and Contouring" services={slimmingAndContouring} />
             <ServiceBox category="Removal of Benign Lesions / Wart Removal" services={wartsRemoval} />
           </div>
-          <button 
+          <button
             onClick={() => scroll('right')} 
             className={`absolute right-0 top-1/2 transform -translate-y-1/2 p-2 rounded-full shadow-md z-10
               ${!canScrollRight ? 'opacity-50 cursor-not-allowed' : 'bg-turq text-white hover:bg-turq-shaded'}
