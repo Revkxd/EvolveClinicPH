@@ -14,10 +14,11 @@ export default {
         turq: {
           DEFAULT: '#588289',
           text: '#31a99e',
-          lighterdefault: '#799f9f',
-          lightlyshaded: '#229191',
-          shaded: '#1c7878',
-          light: '#67f2e3',
+          light: '#739ea5',
+          lighterdefault: '#92b4b9',
+          lightlyshaded: '#5a858c',
+          shaded: '#46676d',
+          shaded2: '#324a4e',
         },
       },
       fontFamily: {

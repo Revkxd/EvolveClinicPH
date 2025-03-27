@@ -40,23 +40,23 @@ export default function WideServiceBox({ category, services }: WideServiceBoxPro
         <h4 className="text-lg font-medium mb-2 text-turq">{services[currentIndex].title}</h4>
         <p className="mb-2">{services[currentIndex].desc}</p>
         <p className="mb-2">
-          <span className="font-semibold">Former Name: </span>
+          <span className="font-semibold text-turq-shaded">Former Name: </span>
           <span>{services[currentIndex].formerName}</span>
         </p>
         <p className="mb-2">
-          <span className="font-semibold">Duration: </span>
+          <span className="font-semibold text-turq-shaded">Duration: </span>
           <span>{services[currentIndex].duration}</span>
         </p>
         <p className="mb-2">
-          <span className="font-semibold">Expectation: </span>
+          {/* <span className="font-semibold text-turq-shaded">Expectation: </span> */}
           <span>{services[currentIndex].expectation}</span>
         </p>
         <p className="mb-2">
-          <span className="font-semibold">Reasoning: </span>
+          {/* <span className="font-semibold text-turq-shaded">Reasoning: </span> */}
           <span>{services[currentIndex].reasoning}</span>
         </p>
         <p className="mb-2">
-          <span className="font-semibold">Enhancement: </span>
+          <span className="font-semibold text-turq-shaded">Enhancement: </span>
           <span>{services[currentIndex].enhancement}</span>
         </p>
       </div>

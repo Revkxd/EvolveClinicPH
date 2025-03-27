@@ -73,7 +73,7 @@ export default function Navbar() {
           </div>
         </div>
       </div>
-      <div className={`${isOpen ? 'block' : 'hidden'} md:hidden bg-turq-lighterdefault`}>
+      <div className={`${isOpen ? 'block' : 'hidden'} md:hidden bg-turq-light`}>
         <NavOptions
           classes="block py-2 px-5 text-xl text-white hover:text-gray-300 transition duration-300"
           onClickFunction={closeMenu}
