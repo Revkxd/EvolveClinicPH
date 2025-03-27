@@ -5,12 +5,8 @@ import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 interface ExpandedService {
   title: string,
-  formerName: string,
   desc: string,
-  duration: string,
-  expectation: string,
-  reasoning: string,
-  enhancement: string
+  bulletList?: string[]
 }
 
 interface WideServiceBoxProps {
@@ -34,31 +30,18 @@ export default function WideServiceBox({ category, services }: WideServiceBoxPro
   }
 
   return (
-    <div className="bg-teal-50 p-4 rounded-lg shadow-md h-[500px] flex flex-col justify-between">
-      <div className="max-h-[450] overflow-y-auto custom-scrollbar">
+    <div className="bg-teal-50 p-4 rounded-lg shadow-md h-[36rem] flex flex-col justify-between">
+      <div className="overflow-y-auto custom-scrollbar">
         <h3 className="text-xl font-bold mb-2 text-turq-shaded">{category}</h3>
         <h4 className="text-lg font-medium mb-2 text-turq">{services[currentIndex].title}</h4>
         <p className="mb-2">{services[currentIndex].desc}</p>
-        <p className="mb-2">
-          <span className="font-semibold text-turq-shaded">Former Name: </span>
-          <span>{services[currentIndex].formerName}</span>
-        </p>
-        <p className="mb-2">
-          <span className="font-semibold text-turq-shaded">Duration: </span>
-          <span>{services[currentIndex].duration}</span>
-        </p>
-        <p className="mb-2">
-          {/* <span className="font-semibold text-turq-shaded">Expectation: </span> */}
-          <span>{services[currentIndex].expectation}</span>
-        </p>
-        <p className="mb-2">
-          {/* <span className="font-semibold text-turq-shaded">Reasoning: </span> */}
-          <span>{services[currentIndex].reasoning}</span>
-        </p>
-        <p className="mb-2">
-          <span className="font-semibold text-turq-shaded">Enhancement: </span>
-          <span>{services[currentIndex].enhancement}</span>
-        </p>
+        <ul className="list-disc list-inside pl-4 space-y-2 mb-2">
+        {services[currentIndex].bulletList && services[currentIndex].bulletList.map((listItem, index) => (
+          <li key={index} className="text-base">
+            {listItem}
+          </li>
+        ))}
+      </ul>
       </div>
       <div className="flex flex-col items-center space-y-4 pt-4">
         <div className="flex justify-center space-x-2">

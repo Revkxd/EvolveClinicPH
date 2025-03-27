@@ -6,7 +6,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react'
 interface Service {
   title: string
   desc: string
-  addons?: string 
+  bulletList?: string[]
 }
 
 interface ServiceBoxProps {
@@ -31,14 +31,16 @@ export default function ServiceBox({ category, services }: ServiceBoxProps) {
 
   const chevronButtonStyle = `p-1 rounded-full ${services.length <= 1 ? 'hidden' : 'bg-turq text-white hover:bg-turq-shaded'} transition duration-300 transform hover:scale-105`
   return (
-    <div className="bg-teal-50 p-4 rounded-lg shadow-lg h-[450px] flex flex-col flex-shrink-0 justify-between overflow-y-auto w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1rem)]">
+    <div className="bg-teal-50 p-4 rounded-lg shadow-lg h-[36rem] flex flex-col flex-shrink-0 justify-between overflow-y-auto w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1rem)]">
       <div>
         <h3 className="text-xl font-bold mb-2 text-turq-shaded">{category}</h3>
         <h4 className="text-lg font-medium mb-2 text-turq">{services[currentIndex].title}</h4>
         <p className="mb-2">{services[currentIndex].desc}</p>
-        <p className="mb-2 font-semibold">
-          {services[currentIndex]?.addons !== undefined ? `Add Ons: ${services[currentIndex].addons}` : ''}
-        </p>
+        {services[currentIndex].bulletList && services[currentIndex].bulletList.map((listItem, index) => (
+          <li key={index} className="text-base">
+            {listItem}
+          </li>
+        ))}
       </div>
       <div className="flex flex-col items-center space-y-4">
         <div className="flex justify-center space-x-2">
