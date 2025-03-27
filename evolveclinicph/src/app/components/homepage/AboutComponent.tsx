@@ -11,7 +11,7 @@ export default function AboutComponent() {
       <AboutTeam />
       <AboutFacilities />
       {/* <AboutTestimonials /> */}
-      <ContactComponent isHomePage={true} />
+      <ContactComponent isHomePage={false} />
     </div>
   )
 }
