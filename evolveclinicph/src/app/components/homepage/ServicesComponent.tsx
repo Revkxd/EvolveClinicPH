@@ -339,7 +339,7 @@ export default function ServicesComponent({ isHomePage }: HomePageProps) {
   }
 
   return (
-    <section id="services" className="py-20">
+    <section id="services" className={isHomePage ? "py-4" : "py-20"}>
       <h2 className="text-5xl font-bold mb-8 text-center">Facials, Dermatologic & Surgical Services</h2>
       <div className={`max-w-6xl mx-auto px-4 ${isHomePage ? 'max-h-[40rem] overflow-y-auto custom-scrollbar' : ''}`}>
         <div className="py-4">
