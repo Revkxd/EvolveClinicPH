@@ -17,9 +17,11 @@ const TEAM_MEMBERS = [
     As a board-certified dermatologist, 
     She offers comprehensive dermatologic services designed to address a wide range of skin conditions. Whether you’re seeking treatment for acne, eczema, or simply want to maintain healthy, youthful skin,  her team is there to help. 
     `,
-    image: "",
+    image: "/doctors/DocCuenca.webp",
   },
 ]
+
+const cardOverflow = false
 
 export default function AboutTeam() {
   return (
@@ -38,7 +40,7 @@ export default function AboutTeam() {
                   className="object-cover object-top"
                 />
               </div>
-              <div className="p-6 -mt-[5rem] relative bg-white min-h-[12.5rem]">
+              <div className={`p-6 relative bg-white ${cardOverflow ? "-mt-[5rem]": ""} min-h-[12.5rem]`}>
                 <div>
                   <h3 className="text-xl font-semibold text-black">{member.name}</h3>
                   <p className="text-turq-shaded font-medium mb-3">{member.role}</p>

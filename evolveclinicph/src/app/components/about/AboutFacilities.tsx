@@ -17,10 +17,6 @@ const FACILITY_IMAGES = [
     alt: "State-of-the-Art Treatment Room",
   },
   {
-    src: "/facilities/Evolve_24.jpg",
-    alt: "Advanced Laser Suite",
-  },
-  {
     src: "/facilities/Evolve_87.jpg",
     alt: "Private Consultation Room",
   },
