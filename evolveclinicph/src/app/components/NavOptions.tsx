@@ -6,6 +6,7 @@ import Link from "next/link"
 export default function NavOptions({ classes, onClickFunction, buttonStyle, excludeContact }: NavOptionsProps) {
   // Regular nav links
   const regularLinks = [
+    { href: "/", label: "home", text: "Home" },
     { href: "/services", label: "services", text: "Services" },
     { href: "/about", label: "about", text: "About Us" },
   ]
