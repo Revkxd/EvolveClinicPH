@@ -266,7 +266,10 @@ export default function ServicesComponent({ isHomePage }: HomePageProps) {
   const scroll = (direction: 'left' | 'right') => {
     const container = scrollContainerRef.current
     if (container) {
-      const scrollAmount = container.clientWidth
+      const serviceBoxWidth = container.querySelector('div[class*="service-box"]')?.clientWidth || 0
+      const gap = 16 // gap-4 equals 16px
+      const scrollAmount = serviceBoxWidth + gap
+      
       const newScrollPosition = direction === 'left'
         ? container.scrollLeft - scrollAmount
         : container.scrollLeft + scrollAmount
