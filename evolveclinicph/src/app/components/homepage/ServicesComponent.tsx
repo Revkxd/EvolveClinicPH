@@ -267,7 +267,7 @@ export default function ServicesComponent({ isHomePage }: HomePageProps) {
     const container = scrollContainerRef.current
     if (container) {
       const serviceBoxWidth = container.querySelector('div[class*="service-box"]')?.clientWidth || 0
-      const gap = 16 // gap-4 equals 16px
+      const gap = 20 // gap-4 equals 16px
       const scrollAmount = serviceBoxWidth + gap
       
       const newScrollPosition = direction === 'left'
@@ -310,7 +310,7 @@ export default function ServicesComponent({ isHomePage }: HomePageProps) {
           </button>
           <div 
             ref={scrollContainerRef} 
-            className="flex flex-nowrap overflow-x-scroll space-x-4 pb-4 custom-scrollbar gap-1"
+            className="flex flex-nowrap overflow-x-scroll space-x-4 pb-4 gap-1 scrollbar-none"
             onScroll={checkScrollability}
           >
             <ServiceBox category="Laser Procedures (FACE)" services={laserProceduresFace} />
