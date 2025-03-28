@@ -15,7 +15,7 @@ interface ServiceBoxProps {
   maxHeight?: string
 }
 
-const chevronButtonStyle = "p-1 rounded-full 'bg-turq text-white hover:bg-turq-shaded transition duration-300 transform hover:scale-105"
+const chevronButtonStyle = "p-1 rounded-full bg-turq text-white hover:bg-turq-shaded transition duration-300 transform hover:scale-105"
 
 export default function ServiceBox({ category, services, maxHeight }: ServiceBoxProps) {
   const [currentIndex, setCurrentIndex] = useState(0)
