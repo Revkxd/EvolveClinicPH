@@ -33,7 +33,7 @@ export default function WideServiceBox({ category, services, maxHeight }: WideSe
   }
 
   return (
-    <div className={`bg-teal-50 p-4 rounded-lg shadow-md ${maxHeight ? `h-[${maxHeight}]` : "h-[38rem]"} flex flex-col justify-between`}>
+    <div className={`bg-teal-50 p-4 rounded-lg shadow-md ${maxHeight ? `h-[${maxHeight}]` : "h-[42rem]"} flex flex-col justify-between`}>
       <div className="overflow-y-auto custom-scrollbar">
         <h3 className="text-xl font-bold mb-2 text-turq-shaded">{category}</h3>
         <h4 className="text-lg font-medium mb-2 text-turq">{services[currentIndex].title}</h4>

@@ -4,8 +4,8 @@ import { useState, useRef } from 'react';
 import Link from "next/link"
 import { ChevronLeft, ChevronRight } from 'lucide-react'
 import { HomePageProps } from '@/types/props'
-import ServiceBox from '../ServiceBox'
-import WideServiceBox from '../WideServiceBox'
+import ServiceBox from '../services/ServiceBox'
+import WideServiceBox from '../services/WideServiceBox'
 
 // #region SERVICES_LIST
 const consultations = [
@@ -292,9 +292,9 @@ export default function ServicesComponent({ isHomePage }: HomePageProps) {
   return (
     <section id="services" className={isHomePage ? "py-4" : "py-20"}>
       <h2 className="text-5xl font-bold mb-8 text-center">Facials, Dermatologic & Surgical Services</h2>
-      <div className={`max-w-6xl mx-auto px-4 ${isHomePage ? 'max-h-[40rem] overflow-y-auto custom-scrollbar' : ''}`}>
+      <div className={`max-w-6xl mx-auto px-4 ${isHomePage ? 'max-h-[45rem] overflow-y-auto custom-scrollbar' : ''}`}>
         {!isHomePage ? <WideServiceBox category="Consultations" services={consultations} maxHeight="4rem"/> : <></>}
-        <div className="py-4">
+        <div className="py-2">
           <WideServiceBox category="Laser Procedures (BODY)" services={laserTreatmentsBody} />
         </div>
         {!isHomePage && (<>
