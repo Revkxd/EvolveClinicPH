@@ -231,6 +231,7 @@ const injectables = [
       effective treatment for other concerns such as hyperhydrosis and bruxism.`
   },
 ]
+
 const slimmingAndContouring = [
   {
     title: 'Contour Care',
@@ -310,7 +311,7 @@ export default function ServicesComponent({ isHomePage }: HomePageProps) {
           </button>
           <div 
             ref={scrollContainerRef} 
-            className="flex flex-nowrap overflow-x-scroll space-x-4 pb-4 gap-1 scrollbar-none"
+            className="flex flex-nowrap overflow-x-hidden space-x-4 pb-4 gap-1 scollbar-none"
             onScroll={checkScrollability}
           >
             <ServiceBox category="Laser Procedures (FACE)" services={laserProceduresFace} />
