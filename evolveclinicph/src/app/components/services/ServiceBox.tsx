@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { ChevronLeft, ChevronRight } from 'lucide-react'
+import FlipCard from '../FlipCard'
 
 interface Service {
   title: string
@@ -20,6 +21,8 @@ const chevronButtonStyle = "p-1 rounded-full bg-turq text-white hover:bg-turq-sh
 export default function ServiceBox({ category, services, maxHeight }: ServiceBoxProps) {
   const [currentIndex, setCurrentIndex] = useState(0)
 
+  const images = ["https://images.unsplash.com/photo-1565884280295-98eb83e41c65?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8YmxhY2slMjBtYW58ZW58MHx8MHx8fDA%3D"];
+
   const nextService = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % services.length)
   }
@@ -34,7 +37,7 @@ export default function ServiceBox({ category, services, maxHeight }: ServiceBox
 
   return (
     <div className={`service-box bg-teal-50 p-4 rounded-lg shadow-lg ${maxHeight ? `h-[${maxHeight}]` : "h-[36rem]"} flex flex-col flex-shrink-0 justify-between overflow-y-auto w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1rem)]`}>
-      <div>
+      {/* <div>
         <h3 className="text-xl font-bold mb-2 text-turq-shaded">{category}</h3>
         <h4 className="text-lg font-medium mb-2 text-turq">{services[currentIndex].title}</h4>
         <p className="mb-2">{services[currentIndex].desc}</p>
@@ -75,7 +78,22 @@ export default function ServiceBox({ category, services, maxHeight }: ServiceBox
             <ChevronRight size={20} />
           </button>
         </div>
-      </div>
+      </div> */}
+      <FlipCard
+        frontImages={images}
+        imageAlt={`${category} services`}
+        title={category}
+        autoTransitionInterval={4000} // 4 seconds between transitions
+      >
+        <div className="space-y-4">
+          {services.map((service, index) => (
+            <div key={index} className="mb-4">
+              <h4 className="text-lg font-medium mb-1">{service.title}</h4>
+              <p className="text-sm text-gray-600">{service.desc}</p>
+            </div>
+          ))}
+        </div>
+      </FlipCard>
     </div>
   )
 }
