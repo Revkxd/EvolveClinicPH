@@ -28,7 +28,7 @@ export const featuredServices: FeaturedService[] = [
     id: "facials",
     name: "Facials",
     images: [
-      "/services/facials.jpg",
+      "/services/facials_1.jpg",
     ],
     description:
       "Revitalize your skin with our advanced resurfacing treatments. Perfect for addressing fine lines, uneven texture, and dullness for a smoother, more radiant complexion.",
