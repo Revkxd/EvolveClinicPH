@@ -31,7 +31,7 @@ export const featuredServices: FeaturedService[] = [
       "/services/facials_1.jpg",
     ],
     description:
-      "Revitalize your skin with our advanced resurfacing treatments. Perfect for addressing fine lines, uneven texture, and dullness for a smoother, more radiant complexion.",
+      "Indulge in our luxurious facial treatments designed to cleanse, exfoliate, and hydrate your skin. Tailored to your unique skin type for optimal results.",
     link: "/services",
   },
   {
