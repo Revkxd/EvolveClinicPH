@@ -13,16 +13,16 @@ const FACILITY_IMAGES = [
     alt: "Evolve Clinic Reception Area",
   },
   {
-    src: "/facilities/Evolve_7.jpg",
+    src: "/facilities/Evolve_RoomAR.jpg",
     alt: "State-of-the-Art Treatment Room",
   },
   {
-    src: "/facilities/Evolve_87.jpg",
-    alt: "Private Consultation Room",
+    src: "/facilities/Evolve_RoomBR.jpg",
+    alt: "Treatment Room with Advanced Equipment",
   },
   {
-    src: "/facilities/Evolve_91.jpg",
-    alt: "Surgical Theater",
+    src: "/facilities/Evolve_TowelsR.jpg",
+    alt: "Luxurious Towels and Amenities",
   },
 ]
 

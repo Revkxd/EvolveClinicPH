@@ -17,7 +17,7 @@ const TEAM_MEMBERS = [
     As a board-certified dermatologist, 
     She offers comprehensive dermatologic services designed to address a wide range of skin conditions. Whether you’re seeking treatment for acne, eczema, or simply want to maintain healthy, youthful skin,  her team is there to help. 
     `,
-    image: "/doctors/DocCuenca.webp",
+    image: "/doctors/DocCuenca2.jpg",
   },
 ]
 
