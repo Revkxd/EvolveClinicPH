@@ -50,18 +50,6 @@ export default function FeaturedServices({ services, autoRotateInterval = 5000 }
 
       <div className="max-w-7xl mx-auto px-4">
         <div className="relative h-[600px] md:h-[700px] lg:h-[800px] rounded-xl overflow-hidden shadow-2xl">
-          {/* Service indicators */}
-          <div className="absolute top-6 left-1/2 transform -translate-x-1/2 z-5 flex space-x-3">
-            {services.map((_, index) => (
-              <div
-                key={index}
-                className={`w-3 h-3 md:w-4 md:h-4 rounded-full transition-all duration-300 ${
-                  index === currentServiceIndex ? "bg-white scale-125" : "bg-white/50"
-                }`}
-              />
-            ))}
-          </div>
-
           {/* Service content with animation */}
           <AnimatePresence mode="wait">
             <motion.div
@@ -117,7 +105,7 @@ export default function FeaturedServices({ services, autoRotateInterval = 5000 }
               </div>
 
               {/* Image indicators - only if multiple images */}
-              {currentService.images.length > 1 && (
+              {/* {currentService.images.length > 1 && (
                 <div className="absolute top-6 right-6 flex space-x-2">
                   {currentService.images.map((_, index) => (
                     <div
@@ -128,7 +116,7 @@ export default function FeaturedServices({ services, autoRotateInterval = 5000 }
                     />
                   ))}
                 </div>
-              )}
+              )} */}
             </motion.div>
           </AnimatePresence>
         </div>

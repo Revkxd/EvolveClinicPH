@@ -28,7 +28,7 @@ export const featuredServices: FeaturedService[] = [
     id: "facials",
     name: "Facials",
     images: [
-      "/services/facemask.webp",
+      "/services/face_treatment.webp",
     ],
     description:
       "Indulge in our luxurious facial treatments designed to cleanse, exfoliate, and hydrate your skin. Tailored to your unique skin type for optimal results.",
