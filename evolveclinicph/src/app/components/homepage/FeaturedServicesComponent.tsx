@@ -51,7 +51,7 @@ export default function FeaturedServices({ services, autoRotateInterval = 5000 }
       <div className="max-w-7xl mx-auto px-4">
         <div className="relative h-[600px] md:h-[700px] lg:h-[800px] rounded-xl overflow-hidden shadow-2xl">
           {/* Service indicators */}
-          <div className="absolute top-6 left-1/2 transform -translate-x-1/2 z-20 flex space-x-3">
+          <div className="absolute top-6 left-1/2 transform -translate-x-1/2 z-5 flex space-x-3">
             {services.map((_, index) => (
               <div
                 key={index}
