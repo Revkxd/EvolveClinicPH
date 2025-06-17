@@ -24,6 +24,38 @@ const FACILITY_IMAGES = [
     src: "/facilities/Evolve_TowelsR.jpg",
     alt: "_",
   },
+  {
+    src: "/facilities/m1.jpg",
+    alt: "Machine 1",
+  },
+  {
+    src: "/facilities/m2.jpg",
+    alt: "Machine 2",
+  },
+  {
+    src: "/facilities/m3.jpg",
+    alt: "Machine 3",
+  },
+  {
+    src: "/facilities/m4.jpg",
+    alt: "Machine 4",
+  },
+  {
+    src: "/facilities/m5.jpg",
+    alt: "Machine 5",
+  },
+  {
+    src: "/facilities/m6.jpg",
+    alt: "Machine 6",
+  },
+  {
+    src: "/facilities/m7.jpg",
+    alt: "Machine 7",
+  },
+  {
+    src: "/facilities/m8.jpg",
+    alt: "Machine 8",
+  },
 ]
 
 export default function AboutFacilities() {
