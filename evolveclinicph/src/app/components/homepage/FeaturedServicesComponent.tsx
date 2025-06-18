@@ -46,10 +46,10 @@ export default function FeaturedServices({ services, autoRotateInterval = 5000 }
 
   return (
     <section id="services" className="py-20">
-      <h2 className="text-3xl font-bold mb-12 text-center">Our Services</h2>
+      <h2 className="text-5xl font-bold mb-12 text-center">Our Services</h2>
 
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="relative h-[600px] md:h-[700px] lg:h-[800px] rounded-xl overflow-hidden shadow-2xl">
+      <div className="max-w-2xl mx-auto px-2">
+        <div className="relative h-[40rem] md:h-[50rem] lg:h-[60rem] rounded-xl overflow-hidden shadow-2xl">
           {/* Service content with animation */}
           <AnimatePresence mode="wait">
             <motion.div
@@ -65,7 +65,8 @@ export default function FeaturedServices({ services, autoRotateInterval = 5000 }
                 src={currentService.images[currentImageIndex] || "/placeholder.svg"}
                 alt={currentService.name}
                 fill
-                className="object-cover"
+                style={{ objectFit: currentService.name === "Facials" ? "contain" : "cover" }}
+                className="object-cover rounded-2xl"
                 priority
               />
 
