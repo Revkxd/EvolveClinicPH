@@ -101,12 +101,12 @@ export default function AboutFacilities() {
   const chevronButtonStyle = "absolute top-1/2 transform -translate-y-1/2 bg-turq/60 p-2 rounded-full shadow-md z-3 text-white hover:bg-turq-shaded transition-colors transform hover:scale-105"
   return (
     <section className="py-16 rounded-xl">
-      <div className="max-w-6xl mx-auto px-4 rounded-xl">
+      <div className="max-w-3xl mx-auto px-4 rounded-3xl">
         <h2 className="text-4xl font-bold mb-12 text-center text-black">{FACILITIES_TITLE}</h2>
 
         <div className="relative">
           <div
-            className="relative h-72 sm:h-96 md:h-[500px] rounded-xl overflow-hidden shadow-xl"
+            className="relative h-72 sm:h-96 md:h-[500px] rounded-xl overflow-hidden"
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
@@ -114,7 +114,8 @@ export default function AboutFacilities() {
               src={FACILITY_IMAGES[currentIndex].src || "/placeholder.svg"}
               alt={FACILITY_IMAGES[currentIndex].alt}
               fill
-              className="object-cover transition-opacity duration-500"
+              style={{objectFit: "contain"}}
+              className="object-cover transition-opacity duration-500 rounded-3xl"
               priority={currentIndex === 0}
             />
 
