@@ -28,6 +28,7 @@ export const featuredServices: FeaturedService[] = [
     id: "facials",
     name: "Facials",
     images: [
+      "/services/facials.jpg",
       "/services/face_treatment.webp",
     ],
     description:
@@ -37,7 +38,10 @@ export const featuredServices: FeaturedService[] = [
   {
     id: "acne-scars",
     name: "Acne Scar Solutions",
-    images: ["/services/microneedling_1.webp", "/services/microneedling_2.webp"],
+    images: [
+      "/services/microneedling_1.webp",
+      "/services/microneedling_2.webp",
+    ],
     description:
       "Comprehensive treatments to address all types of acne scarring. Our customized approach combines multiple modalities for optimal results and skin renewal.",
     link: "/services",
@@ -45,7 +49,10 @@ export const featuredServices: FeaturedService[] = [
   {
     id: "injectables",
     name: "Premium Injectables",
-    images: ["/services/revitacell_1.webp", "/services/revitacell_2.webp"],
+    images: [
+      "/services/revitacell_1.webp",
+      "/services/revitacell_2.webp",
+    ],
     description:
       "Restore volume and reduce signs of aging with our premium injectable treatments. Administered by our expert medical professionals for natural-looking results.",
     link: "/services",

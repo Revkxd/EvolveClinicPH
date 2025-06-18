@@ -65,7 +65,6 @@ export default function FeaturedServices({ services, autoRotateInterval = 5000 }
                 src={currentService.images[currentImageIndex] || "/placeholder.svg"}
                 alt={currentService.name}
                 fill
-                style={{ objectFit: currentService.name === "Facials" ? "contain" : "cover" }}
                 className="object-cover rounded-2xl"
                 priority
               />
