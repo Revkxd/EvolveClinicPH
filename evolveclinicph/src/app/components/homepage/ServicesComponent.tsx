@@ -17,6 +17,22 @@ const consultations = [
 
 const laserProceduresFace = [
   {
+    image: true,
+    src: "/services/goldenglow_1.webp",
+    title: 'Golden Glow',
+    desc: 'Golden Glow image'
+  },
+  {
+    image: true,
+    src: "/services/goldrejuvenation_1.webp",
+    title: 'Gold Rejuvenation',
+    desc: 'Gold Rejuvenation image'
+  },
+  {
+    title: 'Laser Procedures',
+    desc: 'Advanced laser treatments for skin rejuvenation, pigmentation correction, and more. Our state-of-the-art technology delivers exceptional results with minimal downtime.'
+  },
+  {
     title: 'Carbon Peel',
     desc: 'A non-invasive and painless treatment that uses a combination of carbon & laser technology to deep cleanse, exfoliate, rejuvenate and reveal brighter skin. This treatment may also reduce oil production. Best for oily and acne prone skin as well those seeking to improve tone and texture.'
   },
@@ -92,6 +108,18 @@ const laserTreatmentsBody = [
 ]
 
 const microneedling = [
+  {
+    image: true,
+    src: "/services/microneedling_1.webp",
+    title: 'Microneedling',
+    desc: 'Microneedling image'
+  },
+  {
+    image: true,
+    src: "/services/microneedling_2.webp",
+    title: 'Microneedling',
+    desc: 'Microneedling image 2'
+  },
   {
     title: 'DermaRoller',
     desc: `Traditional microneedling which uses fine needles in a roller to create controlled micro-injuries. 
@@ -193,6 +221,18 @@ const wartsRemoval = [
 
 const injectables = [
   {
+    image: true,
+    src: "/services/revitacell_1.webp",
+    title: 'Revitacell',
+    desc: 'Revitacell image'
+  },
+  {
+    image: true,
+    src: "/services/revitacell_2.webp",
+    title: 'Revitacell',
+    desc: 'Revitacell image 2'
+  },
+  {
     title: 'RevitaCell',
     desc: `New Cellular Treatment Factor (NTCF) is designed to directly revitalize and renew the dermis 
       by delivering a blend of active ingredients (Vit. C & E, AA, HA, minerals, NA). These injections 
@@ -233,6 +273,18 @@ const injectables = [
 ]
 
 const slimmingAndContouring = [
+  {
+    image: true,
+    src: "/services/contourcare.webp",
+    title: 'Contour Care',
+    desc: 'Contour Care image'
+  },
+  {
+    image: true,
+    src: "/services/slimline_liquid_lipo.webp",
+    title: 'SlimLine Liquid Lipo',
+    desc: 'SlimLine Liquid Lipo image'
+  },
   {
     title: 'Contour Care',
     desc: `A non-surgical, minimally-invasive injectable solution to target unwanted facial fat. Noticeable 
@@ -295,11 +347,9 @@ export default function ServicesComponent({ isHomePage }: HomePageProps) {
       <h2 className="text-5xl font-bold mb-8 text-center">Facials, Dermatologic & Surgical Services</h2>
       <div className={`max-w-6xl mx-auto px-4 ${isHomePage ? 'max-h-[45rem] overflow-y-auto custom-scrollbar' : ''}`}>
         {!isHomePage ? <WideServiceBox category="Consultations" services={consultations} maxHeight="4rem"/> : <></>}
-        <div className="py-2">
-          <WideServiceBox category="Laser Procedures (BODY)" services={laserTreatmentsBody} />
-        </div>
+
         {!isHomePage && (<>
-        <div className="relative max-w-6xl mx-auto">
+        <div className="relative max-w-6xl mx-auto pt-2">
           <button
             onClick={() => scroll('left')} 
             className={`absolute left-0 top-1/2 transform -translate-y-1/2 p-2 rounded-full shadow-md z-10
@@ -316,9 +366,9 @@ export default function ServicesComponent({ isHomePage }: HomePageProps) {
           >
             <ServiceBox category="Laser Procedures (FACE)" services={laserProceduresFace} />
             <ServiceBox category="Microneedling" services={microneedling} />
-            <ServiceBox category="Scar Solutions" services={scarSolutions} />
             <ServiceBox category="Injectables" services={injectables} />
             <ServiceBox category="Slimming and Contouring" services={slimmingAndContouring} />
+            <ServiceBox category="Scar Solutions" services={scarSolutions} />
             <ServiceBox category="Removal of Benign Lesions / Wart Removal" services={wartsRemoval} />
           </div>
           <button
@@ -332,6 +382,10 @@ export default function ServicesComponent({ isHomePage }: HomePageProps) {
           </button>
         </div>
         </>)}
+
+        <div className="py-2">
+          <WideServiceBox category="Laser Procedures (BODY)" services={laserTreatmentsBody} />
+        </div>
       </div>
       {isHomePage && (
       <div className="flex justify-center mt-4">
