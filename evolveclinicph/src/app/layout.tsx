@@ -36,7 +36,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`scroll-smooth ${lexendDeca.variable}`}>
-      <body className={`${inter.className} custom-scrollbar bg-gray-100 font-sans`}>
+      <body className={`${inter.className} custom-scrollbar bg-gray-100 font-sans overscroll-none`}>
         <SpeedInsights />
         <Analytics />
         <div className='flex flex-col min-h-screen'>
